@@ -6,62 +6,165 @@
     <title>Donate | Youth Basketball Fundraiser</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      /* General page styling */
+      body {
+        font-family: 'Times New Roman', serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-image: url('images/baller.gif');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        height: 100vh;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+      }
+
+      /* Navigation Bar */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        width: 100%; /* Ensure full width */
+        z-index: 100;
+        box-sizing: border-box; /* Make sure padding does not cause overflow */
+      }
+
+      .nav-left, .nav-right {
+        display: flex;
+        gap: 20px;
+        max-width: 100%; /* Prevent overflow */
+      }
+
+      .nav-center {
+        color: #ff6f00; /* Basketball orange */
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .nav-center:hover {
+        color: #d65a00;
+      }
+
+      .nav-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Main Content Area */
+      .content {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      /* Contact Form Container */
       .contact-container {
-        max-width: 800px;
-        margin: 70px auto;
-        text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        width: 100%;
       }
 
       .contact-container h1 {
-        font-size: 32px;
+        text-align: center;
+        font-size: 36px;
         margin-bottom: 20px;
-      }
-
-      .contact-container form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .contact-container label {
-        margin-top: 10px;
-        font-size: 16px;
+        color: #333;
         font-weight: bold;
-        align-self: flex-start;
+      }
+
+      /* Form Inputs Styling */
+      .contact-container label {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        text-align: left;
+        display: block;
       }
 
       .contact-container input,
       .contact-container textarea {
         width: 100%;
-        max-width: 600px;
-        padding: 10px;
-        margin-top: 5px;
+        padding: 12px;
+        margin-bottom: 20px;
         border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 14px;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fafafa;
+      }
+
+      .contact-container input:focus,
+      .contact-container textarea:focus {
+        border-color: #ff6f00;
+        outline: none;
       }
 
       .contact-container button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        border: none;
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
         background-color: #ff6f00;
-        color: #fff;
-        font-size: 16px;
-        border-radius: 5px;
+        border: none;
+        border-radius: 8px;
+        color: white;
         cursor: pointer;
+        transition: background-color 0.3s ease;
       }
 
       .contact-container button:hover {
         background-color: #d65a00;
       }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+        }
+
+        .nav-left,
+        .nav-right {
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .contact-container {
+          padding: 30px;
+        }
+
+        .contact-container h1 {
+          font-size: 28px;
+        }
+
+        .contact-container button {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- <header>
-      <h1>Donate to Support Youth Basketball</h1>
-    </header> -->
-
     <nav>
       <div class="nav-left">
         <a href="leaderboard.html" class="nav-center">Leaderboard</a>
@@ -81,55 +184,47 @@
     </nav>
 
     <div class="content">
-      <main>
-        <!-- <section class="hero">
-          <h2>Make a Difference Today</h2>
-          <p>Your donation helps young athletes thrive.</p>
-        </section> -->
+      <div class="contact-container">
+        <h1>Donate Today</h1>
+        <form action="#" method="POST">
+          <label for="name">Your Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
 
-        <div class="contact-container">
-          <h1>Donate Today</h1>
-          <form action="#" method="POST">
-            <label for="name">Your Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-            />
+          <label for="email">Your Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
 
-            <label for="email">Your Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
+          <label for="donation">Donation Amount:</label>
+          <input
+            type="text"
+            id="donation"
+            name="donation"
+            placeholder="Enter an amount"
+            required
+          />
 
-            <label for="donation>">Donation:</label>
-            <input
-              type="text"
-              id="donation"
-              name="donation"
-              placeholder="Enter an amount"
-              required
-            />
+          <label for="message">Your Message (Optional):</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="Write your message here"
+          ></textarea>
 
-            <label for="message">Your Message (Optional):</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Write your message here"
-              required
-            ></textarea>
-
-            <button type="submit">Donate Now</button>
-          </form>
-        </div>
-      </main>
+          <button type="submit">Donate Now</button>
+        </form>
+      </div>
     </div>
 
     <footer>
@@ -140,9 +235,11 @@
       document
         .getElementById('donationForm')
         .addEventListener('submit', function (event) {
-          event.preventDefault()
-          alert('Thank you for your donation!')
-        })
+          event.preventDefault();
+          alert('Thank you for your donation!');
+        });
     </script>
   </body>
 </html>
+
+
