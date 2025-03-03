@@ -6,11 +6,83 @@
     <title>Youth Basketball Fundraiser</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      body {
+        background-color: #f4f4f4; /* Monochrome light background color */
+        font-family: 'Times New Roman', serif;
+      }
+
       .home-container {
         max-width: 800px;
         margin: 70px auto;
         text-align: center;
         line-height: 1.6;
+        font-size: 18px;
+        color: #333;
+      }
+
+      .hero {
+        background: url('images/lebron-james-lebron.gif') no-repeat center center;
+        background-size: cover;
+        padding: 80px 20px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #ff6f00; /* Basketball orange */
+      }
+
+      .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .cta-button {
+        background-color: #ff6f00;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .cta-button:hover {
+        background-color: #d65a00;
+      }
+
+      .section {
+        padding: 60px 20px;
+        background-color: #f4f4f4;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .section h3 {
+        font-size: 28px;
+        color: #333;
+      }
+
+      .section p {
+        font-size: 16px;
+        color: #555;
+        margin-top: 15px;
+      }
+
+      .image-container {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .image-container img {
+        width: 50%; /* Made the image smaller */
+        max-width: 600px;
+        height: auto;
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -33,7 +105,42 @@
       </div>
     </nav>
 
-    <div class="home-container">Home Page</div>
+    <!-- Hero Section -->
+    <div class="hero">
+      <h2>Welcome to the Youth Basketball Fundraiser!</h2>
+      <p>Your support helps young athletes excel and reach their goals on and off the court.</p>
+      <a href="donate.html" class="cta-button">Make a Donation</a>
+    </div>
+
+    <!-- Insert Image Section -->
+    <div class="image-container">
+      <img src="images/homePage.webp" alt="Youth Basketball Fundraiser" />
+    </div>
+
+    <!-- About the Fundraiser Section -->
+    <div class="section">
+      <h3>About the Fundraiser</h3>
+      <p>
+        We are dedicated to helping young athletes achieve their dreams by providing them with the resources, coaching, and opportunities they need to succeed. Every donation helps provide equipment, uniforms, and access to coaching for youth basketball teams.
+      </p>
+    </div>
+
+    <!-- How You Can Help Section -->
+    <div class="section">
+      <h3>How You Can Help</h3>
+      <p>
+        Whether it's making a donation, volunteering your time, or spreading the word, you can make a difference! Learn more about how you can help by visiting our donation page or getting involved with one of our many community events.
+      </p>
+    </div>
+
+    <!-- Get Involved Section -->
+    <div class="section">
+      <h3>Get Involved Today!</h3>
+      <p>
+        Join us in making a difference for young athletes. Every little bit counts, and together we can create a brighter future for youth basketball.
+      </p>
+      <a href="donate.html" class="cta-button">Donate Now</a>
+    </div>
 
     <footer>
       <p>&copy; 2025 Youth Basketball Fundraiser. All Rights Reserved.</p>
