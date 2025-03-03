@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Youth Basketball Fundraiser</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .contact-container {
+        max-width: 800px;
+        margin: 70px auto;
+        text-align: center;
+      }
+
+      .contact-container h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .contact-container form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-container label {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        align-self: flex-start;
+      }
+
+      .contact-container input,
+      .contact-container textarea {
+        width: 100%;
+        max-width: 600px;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .contact-container button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background-color: #ff6f00;
+        color: #fff;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contact-container button:hover {
+        background-color: #d65a00;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <header>
+      <h1>Donate to Support Youth Basketball</h1>
+    </header> -->
+
+    <nav>
+      <div class="nav-left">
+        <a href="leaderboard.html" class="nav-center">Leaderboard</a>
+        <a href="teams.html" class="nav-center">Team Pages</a>
+        <a href="testimonials.html" class="nav-center">Testimonials</a>
+        <a href="donate.html" class="nav-center">Donate</a>
+      </div>
+      <a href="index.html" class="nav-center">Youth Basketball Fundraiser</a>
+      <div class="nav-right">
+        <a href="contact.html">
+          <img class="nav-icon" src="images/contact-mail.png" />
+        </a>
+        <a href="about.html">
+          <img class="nav-icon" src="images/info.png" />
+        </a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <main>
+        <!-- <section class="hero">
+          <h2>Make a Difference Today</h2>
+          <p>Your donation helps young athletes thrive.</p>
+        </section> -->
+
+        <div class="contact-container">
+          <h1>Contact Us</h1>
+          <form action="#" method="POST">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Your Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="message">Your Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here"
+              required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Youth Basketball Fundraiser. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
