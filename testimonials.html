@@ -13,8 +13,8 @@
             padding: 0 50px; /* Adds some spacing from the edges */
         }
 
-        button {
-            background-color: #007BFF;  /* Primary blue color */
+        .nav-button {
+            background-color: var(--orange-color);  /* Primary blue color */
             color: white;
             padding: 12px 24px;
             font-size: 16px;
@@ -26,12 +26,12 @@
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         }
 
-        button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+        .nav-button:hover {
+            background-color: var(--dark-orange-color); /* Darker blue on hover */
             transform: scale(1.05);
         }
 
-        button:active {
+        .nav-button:active {
             transform: scale(0.95);
         }
 
@@ -52,7 +52,7 @@
         }
 
         .team-display h2 {
-            color: #007BFF;
+            color: var(--orange-color);
         }
 
         .team-display p {
@@ -63,23 +63,24 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-            <a href="leaderboard.html" class="nav-center">Leaderboard</a>
-            <a href="teams.html" class="nav-center">Team Pages</a>
-            <a href="testimonials.html" class="nav-center">Testimonials</a>
-            <a href="donate.html" class="nav-center">Donate</a>
-        </div>
-            <a href="index.html" class="nav-center">Youth Basketball Fundraiser</a>
-        <div class="nav-right">
-            <a href="contact.html">
-                <img class="nav-icon" src="images/contact-mail.png" />
-            </a>
-            <a href="about.html">
-                <img class="nav-icon" src="images/info.png" />
-            </a>
-        </div>
-    </nav>
+    <!-- Fixed Header -->
+    <header>
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <button class="menu-toggle">☰</button> 
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li id="donate"><a href="donate.html">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <script>
         // Meant to satisfy:
@@ -182,6 +183,15 @@
 
             displayTeam(teams[index]);
         }); 
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("active");
+            });
+        });
     </script>
 
 <!-- Get style for this later -->
@@ -189,16 +199,17 @@
     <h3>Click through this slideshow to read about some teams who fundraised through us!</h3>
 
     <div class="button-cont">
-        <button id="previous">&lArr; Previous</button>
-        <button id="next">Next &rArr;</button>
+        <button class="nav-button" id="previous">&lArr; Previous</button>
+        <button class="nav-button" id="next">Next &rArr;</button>
     </div>
 
     <div id="team-display" class="team-display">
         <!-- populated by Javascript code above -->
     </div>
 
+    <br />
     <footer>
-        <p>&copy; 2025 Youth Basketball Fundraiser. All Rights Reserved.</p>
+        <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
