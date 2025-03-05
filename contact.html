@@ -107,23 +107,24 @@
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-            <a href="leaderboard.html" class="nav-center">Leaderboard</a>
-            <a href="teams.html" class="nav-center">Team Pages</a>
-            <a href="testimonials.html" class="nav-center">Testimonials</a>
-            <a href="donate.html" class="nav-center">Donate</a>
-        </div>
-            <a href="index.html" class="nav-center">Youth Basketball Fundraiser</a>
-        <div class="nav-right">
-            <a href="contact.html">
-                <img class="nav-icon" src="images/contact-mail.png" />
-            </a>
-            <a href="about.html">
-                <img class="nav-icon" src="images/info.png" />
-            </a>
-        </div>
-    </nav>
+    <!-- Fixed Header -->
+    <header>
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <button class="menu-toggle">☰</button> 
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="donate"><a href="donate.html">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <script>
         let teamInfo;
@@ -216,6 +217,15 @@
                 document.getElementById("contact-form").reset(); // TODO: maybe ask professor if this is okay instead of submitting
             }
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function() {
+                menu.classList.toggle("active");
+            });
+        });
     </script>
     
     <div class="content">
@@ -259,7 +269,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Youth Basketball Fundraiser. All Rights Reserved.</p>
+        <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

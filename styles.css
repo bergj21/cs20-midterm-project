@@ -21,9 +21,8 @@ footer {
 html, body {
     height: 100%;
     margin: 0;
-}
-.content {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* the header is a flex container with the logo on the left
@@ -72,6 +71,7 @@ body {
     padding: 0;
     display: flex; 
     justify-content: flex-end;
+    align-items: center;
 }
 
 .menu li {
@@ -90,6 +90,26 @@ body {
 .menu a:hover {
     background-color: var(--orange-color);
     color: black; 
+}
+
+.donate a {
+    display: inline-block;
+    background-color: var(--orange-color); /* Bright color to stand out */
+    color: black;
+    padding: 5px 5px;
+    border-radius: 25px; /* Makes it ovular */
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.donate a:hover {
+    background-color: var(--dark-orange-color);
+    transform: scale(1.05);
+}
+
+.donate a:active {
+    transform: scale(0.95);
 }
 
 /* The hamburger menu style */

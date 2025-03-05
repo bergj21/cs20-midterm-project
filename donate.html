@@ -3,57 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate | Youth Basketball Fundraiser</title>
+    <title>Donate</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
       /* General page styling */
       body {
-        font-family: 'Times New Roman', serif;
-        margin: 0;
-        padding: 0;
-        color: white;
         background-image: url('images/baller.gif');
         background-size: cover;
-        background-position: center;
         background-attachment: scroll;
         background-repeat: no-repeat;
         height: 100vh;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-      }
-
-      /* Navigation Bar */
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 30px;
-        background-color: white;
-        position: sticky;
-        top: 0;
-        width: 100%; /* Ensure full width */
-        z-index: 100;
-        box-sizing: border-box; /* Make sure padding does not cause overflow */
-      }
-
-      .nav-left, .nav-right {
-        display: flex;
-        gap: 20px;
-        max-width: 100%; /* Prevent overflow */
-      }
-
-      .nav-center {
-        color: #ff6f00; /* Basketball orange */
-        text-decoration: none;
-        font-size: 18px;
-      }
-
-      .nav-center:hover {
-        color: #d65a00;
-      }
-
-      .nav-icon {
-        width: 20px;
-        height: 20px;
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
       }
 
       /* Main Content Area */
@@ -126,62 +86,27 @@
       .contact-container button:hover {
         background-color: #d65a00;
       }
-
-      /* Footer */
-      footer {
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 20px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-      }
-
-      /* Responsive Adjustments */
-      @media (max-width: 768px) {
-        nav {
-          flex-direction: column;
-        }
-
-        .nav-left,
-        .nav-right {
-          justify-content: center;
-          gap: 10px;
-        }
-
-        .contact-container {
-          padding: 30px;
-        }
-
-        .contact-container h1 {
-          font-size: 28px;
-        }
-
-        .contact-container button {
-          font-size: 16px;
-        }
-      }
     </style>
   </head>
   <body>
-    <nav>
-      <div class="nav-left">
-        <a href="leaderboard.html" class="nav-center">Leaderboard</a>
-        <a href="teams.html" class="nav-center">Team Pages</a>
-        <a href="testimonials.html" class="nav-center">Testimonials</a>
-        <a href="donate.html" class="nav-center">Donate</a>
-      </div>
-      <a href="index.html" class="nav-center">Youth Basketball Fundraiser</a>
-      <div class="nav-right">
-        <a href="contact.html">
-          <img class="nav-icon" src="images/contact-mail.png" />
+    <!-- Fixed Header -->
+    <header>
+        <a href="index.html">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
         </a>
-        <a href="about.html">
-          <img class="nav-icon" src="images/info.png" />
-        </a>
-      </div>
-    </nav>
+        <nav>
+            <button class="menu-toggle">☰</button> 
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="donate"><a href="donate.html">Donate</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <div class="content">
       <div class="contact-container">
@@ -228,7 +153,7 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 Youth Basketball Fundraiser. All Rights Reserved.</p>
+        <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
     </footer>
 
     <script>
@@ -238,6 +163,15 @@
           event.preventDefault();
           alert('Thank you for your donation!');
         });
+
+      document.addEventListener("DOMContentLoaded", function() {
+          const menuToggle = document.querySelector(".menu-toggle");
+          const menu = document.querySelector(".menu");
+  
+          menuToggle.addEventListener("click", function() {
+              menu.classList.toggle("active");
+          });
+      });
     </script>
   </body>
 </html>
