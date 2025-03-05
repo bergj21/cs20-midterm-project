@@ -9,38 +9,38 @@
   <body>
     <!-- Fixed Header -->
     <header>
-        <a href="index.html">
-            <img src="images/logo.jpg" alt="Logo" class="logo">
-        </a>
-        <nav>
-            <button class="menu-toggle">☰</button> 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="donate"><a href="donate.html">Donate</a></li>
-            </ul>
-        </nav>
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="leagues.html">Leagues</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="donate"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
     </header>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const menu = document.querySelector(".menu");
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle')
+        const menu = document.querySelector('.menu')
 
-            menuToggle.addEventListener("click", function() {
-                menu.classList.toggle("active");
-            });
-        });
+        menuToggle.addEventListener('click', function () {
+          menu.classList.toggle('active')
+        })
+      })
     </script>
 
     <div>Team Page</div>
 
     <footer>
-        <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
-      </footer>
+      <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>

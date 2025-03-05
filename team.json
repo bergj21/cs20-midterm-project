@@ -1,0 +1,63 @@
+[
+  {
+    "team-name": "",
+    "team-location": "",
+    "team-description": "",
+    "roster": ["", ""],
+    "donations": [100, 200, 50]
+  },
+  {
+    "team-name": "New City Hoopers",
+    "location": "New City, NY",
+    "description": "A dedicated youth basketball team striving for excellence on and off the court. Support our journey to the regional championship!",
+    "roster": [
+      "Jake Simmons",
+      "Ethan Reynolds",
+      "Liam Carter",
+      "Noah Mitchell",
+      "Mason Bennett",
+      "Lucas Griffin",
+      "Owen Hayes",
+      "Aiden Scott",
+      "Caleb Turner",
+      "Nathan Foster"
+    ],
+    "donations": [100, 200, 50, 300, 150, 75, 500, 25, 400, 120]
+  },
+  {
+    "team-name": "Rockland Raptors",
+    "location": "Rockland, NY",
+    "description": "A passionate group of young athletes aiming to dominate the court and build strong teamwork skills. Your support helps us reach new heights!",
+    "roster": [
+      "Brayden Lewis",
+      "Logan Adams",
+      "Connor Evans",
+      "Dylan Brooks",
+      "Hunter Collins",
+      "Landon Reed",
+      "Eli Parker",
+      "Carter Hayes",
+      "Austin Rogers",
+      "Tyler James"
+    ],
+    "donations": [250, 400, 100, 50, 600, 75, 200, 500, 150, 300]
+  },
+  {
+    "team-name": "Hudson Valley Thunder",
+    "location": "Hudson Valley, NY",
+    "description": "A talented youth basketball squad committed to excellence, discipline, and sportsmanship. Help us fund our tournament season!",
+    "roster": [
+      "Jayden Martinez",
+      "Gabriel Rivera",
+      "Anthony Brown",
+      "Sebastian Torres",
+      "Xavier Lopez",
+      "Nathaniel Ramirez",
+      "Benjamin Cruz",
+      "Jonathan Ortiz",
+      "Christian Hernandez",
+      "Dominic Gonzalez"
+    ],
+    "donations": [350, 100, 250, 50, 400, 275, 500, 125, 75, 600]
+  }
+]

@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        background: url('images/basketball-court.png') no-repeat center center/cover;
+        background: url('images/basketball-court.png') no-repeat center
+          center/cover;
       }
 
       .about-container {
@@ -55,33 +56,42 @@
   <body>
     <!-- Fixed Header -->
     <header>
-        <a href="index.html">
-            <img src="images/logo.jpg" alt="Logo" class="logo">
-        </a>
-        <nav>
-            <button class="menu-toggle">☰</button> 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="donate"><a href="donate.html">Donate</a></li>
-            </ul>
-        </nav>
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="leagues.html">Leagues</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="donate"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div class="about-container">
       <h1>About Us</h1>
-      <p class="mission">Empowering young athletes through community-driven fundraising.</p>
-      <p>
-        Our Youth Basketball Fundraiser was founded to support young athletes in achieving their dreams. We aim to provide financial assistance, equipment, and opportunities for underprivileged players so they can focus on developing their skills and passion for the game.
+      <p class="mission">
+        Empowering young athletes through community-driven fundraising.
       </p>
       <p>
-        This initiative is a league-wide effort, bringing together coaches, parents, and community leaders to ensure that every young player has the resources they need. Donations help fund tournament fees, new uniforms, training programs, and scholarship opportunities for players who may not have the financial means to participate in competitive basketball.
+        Our Youth Basketball Fundraiser was founded to support young athletes in
+        achieving their dreams. We aim to provide financial assistance,
+        equipment, and opportunities for underprivileged players so they can
+        focus on developing their skills and passion for the game.
       </p>
-      
+      <p>
+        This initiative is a league-wide effort, bringing together coaches,
+        parents, and community leaders to ensure that every young player has the
+        resources they need. Donations help fund tournament fees, new uniforms,
+        training programs, and scholarship opportunities for players who may not
+        have the financial means to participate in competitive basketball.
+      </p>
+
       <h2>Meet Our Team</h2>
       <div class="team-members" id="team-container"></div>
     </div>
@@ -96,28 +106,44 @@
 
     <script>
       const teamMembers = [
-        { name: "Sarah Thompson", role: "Fundraising Director", experience: "10 years" },
-        { name: "James Lee", role: "Community Coordinator", experience: "8 years" },
-        { name: "Emma Johnson", role: "Event Organizer", experience: "7 years" },
-        { name: "David Carter", role: "Sponsorship Manager", experience: "6 years" }
-      ];
+        {
+          name: 'Sarah Thompson',
+          role: 'Fundraising Director',
+          experience: '10 years',
+        },
+        {
+          name: 'James Lee',
+          role: 'Community Coordinator',
+          experience: '8 years',
+        },
+        {
+          name: 'Emma Johnson',
+          role: 'Event Organizer',
+          experience: '7 years',
+        },
+        {
+          name: 'David Carter',
+          role: 'Sponsorship Manager',
+          experience: '6 years',
+        },
+      ]
 
-      const container = document.getElementById("team-container");
-      teamMembers.forEach(member => {
-        const div = document.createElement("div");
-        div.classList.add("member");
-        div.innerHTML = `<h3>${member.name}</h3><p>${member.role}</p><p>Experience: ${member.experience}</p>`;
-        container.appendChild(div);
-      });
+      const container = document.getElementById('team-container')
+      teamMembers.forEach((member) => {
+        const div = document.createElement('div')
+        div.classList.add('member')
+        div.innerHTML = `<h3>${member.name}</h3><p>${member.role}</p><p>Experience: ${member.experience}</p>`
+        container.appendChild(div)
+      })
 
-      document.addEventListener("DOMContentLoaded", function() {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const menu = document.querySelector(".menu");
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle')
+        const menu = document.querySelector('.menu')
 
-        menuToggle.addEventListener("click", function() {
-            menu.classList.toggle("active");
-        });
-      });
+        menuToggle.addEventListener('click', function () {
+          menu.classList.toggle('active')
+        })
+      })
     </script>
   </body>
 </html>

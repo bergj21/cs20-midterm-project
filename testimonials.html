@@ -1,215 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonials</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        .button-cont {
-            display: flex;
-            justify-content: space-between; /* Places one button on each side */
-            padding: 0 50px; /* Adds some spacing from the edges */
-        }
+      .button-cont {
+        display: flex;
+        justify-content: space-between; /* Places one button on each side */
+        padding: 0 50px; /* Adds some spacing from the edges */
+      }
 
-        .nav-button {
-            background-color: var(--orange-color);  /* Primary blue color */
-            color: white;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-        }
+      .nav-button {
+        background-color: var(--orange-color); /* Primary blue color */
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+      }
 
-        .nav-button:hover {
-            background-color: var(--dark-orange-color);
-            transform: scale(1.05);
-        }
+      .nav-button:hover {
+        background-color: var(--dark-orange-color);
+        transform: scale(1.05);
+      }
 
-        .nav-button:active {
-            transform: scale(0.95);
-        }
+      .nav-button:active {
+        transform: scale(0.95);
+      }
 
-        .team-display {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 80%;  /* Set width to 80% of the page */
-            max-width: 1200px; /* Optional: Prevent it from getting too wide */
-            margin: auto; /* Centers it on the page */
-            text-align: left;
-        }
+      .team-display {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%; /* Set width to 80% of the page */
+        max-width: 1200px; /* Optional: Prevent it from getting too wide */
+        margin: auto; /* Centers it on the page */
+        text-align: left;
+      }
 
-        .team-display img {
-            width: 500px; /* Might have to change for window size */
-            border-radius: 10px;
-        }
+      .team-display img {
+        width: 500px; /* Might have to change for window size */
+        border-radius: 10px;
+      }
 
-        .team-display h2 {
-            color: var(--orange-color);
-        }
+      .team-display h2 {
+        color: var(--orange-color);
+      }
 
-        .team-display p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
+      .team-display p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Fixed Header -->
     <header>
-        <a href="index.html">
-            <img src="images/logo.jpg" alt="Logo" class="logo">
-        </a>
-        <nav>
-            <button class="menu-toggle">☰</button> 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="leaderboard.html">Leaderboard</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="donate"><a href="donate.html">Donate</a></li>
-            </ul>
-        </nav>
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <button class="menu-toggle">☰</button>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="leagues.html">Leagues</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li class="donate"><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
     </header>
 
     <script>
-        // Meant to satisfy:
-        // - Use of a JavaScript object plus an array of that object to construct a page
-        // - Includes a jQuery "special effect" (animation, fade, etc.)
-        const teams = [
-            {
-                league_name: "AAU National Circuit",
-                team_name: "Rising Stars Elite",
-                location: "Chicago, IL",
-                photo: "images/rising_stars.jpg",
-                amount_raised: 15000,
-                description: `A competitive AAU team focused on developing top high school talent 
+      // Meant to satisfy:
+      // - Use of a JavaScript object plus an array of that object to construct a page
+      // - Includes a jQuery "special effect" (animation, fade, etc.)
+      const teams = [
+        {
+          league_name: 'AAU National Circuit',
+          team_name: 'Rising Stars Elite',
+          location: 'Chicago, IL',
+          photo: 'images/rising_stars.jpg',
+          amount_raised: 15000,
+          description: `A competitive AAU team focused on developing top high school talent 
                 and preparing players for college recruitment. The funds raised helped cover 
                 travel expenses to national tournaments, providing players with exposure to 
                 college scouts. It also contributed to new uniforms and equipment, ensuring 
-                the team remains competitive at the highest level.`
-            },
-            {
-                league_name: "Nike EYBL",
-                team_name: "Team Takeover",
-                location: "Washington, D.C.",
-                photo: "images/takeover.jpg",
-                amount_raised: 22000,
-                description: `A nationally recognized travel team that competes in the Nike 
+                the team remains competitive at the highest level.`,
+        },
+        {
+          league_name: 'Nike EYBL',
+          team_name: 'Team Takeover',
+          location: 'Washington, D.C.',
+          photo: 'images/takeover.jpg',
+          amount_raised: 22000,
+          description: `A nationally recognized travel team that competes in the Nike 
                 Elite Youth Basketball League. The fundraising allowed the team to participate 
                 in top-tier events across the country, giving players a platform to showcase 
                 their skills. It also helped provide financial assistance to families who 
                 could not afford travel costs, ensuring every player had an equal opportunity 
-                to compete.`
-            },
-            {
-                league_name: "High School Varsity",
-                team_name: "Lincoln High Lions",
-                location: "Los Angeles, CA",
-                photo: "images/lions.jpg",
-                amount_raised: 5000,
-                description: `A strong high school program with multiple state championships 
+                to compete.`,
+        },
+        {
+          league_name: 'High School Varsity',
+          team_name: 'Lincoln High Lions',
+          location: 'Los Angeles, CA',
+          photo: 'images/lions.jpg',
+          amount_raised: 5000,
+          description: `A strong high school program with multiple state championships 
                 and a history of sending players to college basketball. The money raised helped 
                 fund new training equipment, improved gym facilities, and additional coaching 
                 support. It also covered entry fees for summer tournaments, allowing players 
-                to gain more experience before the official high school season.`
-            },
-            {
-                league_name: "Middle School AAU",
-                team_name: "Future Hoopers Academy",
-                location: "Dallas, TX",
-                photo: "images/future_hoopers.jpg",
-                amount_raised: 3000,
-                description: `A developmental team for middle school players looking to refine 
+                to gain more experience before the official high school season.`,
+        },
+        {
+          league_name: 'Middle School AAU',
+          team_name: 'Future Hoopers Academy',
+          location: 'Dallas, TX',
+          photo: 'images/future_hoopers.jpg',
+          amount_raised: 3000,
+          description: `A developmental team for middle school players looking to refine 
                 their skills and transition into elite competition. Fundraising efforts helped 
                 the team afford quality practice facilities and professional coaching clinics. 
                 Additionally, it provided scholarships for talented players from low-income 
-                families, ensuring that financial barriers did not limit opportunities.`
-            },
-            {
-                league_name: "High School Varsity League",
-                team_name: "Brooklyn Ballers",
-                location: "Brooklyn, NY",
-                photo: "images/brooklyn_ballers.jpg",
-                amount_raised: 5000,
-                description: `A dedicated high school girls' basketball team known for their hard work 
+                families, ensuring that financial barriers did not limit opportunities.`,
+        },
+        {
+          league_name: 'High School Varsity League',
+          team_name: 'Brooklyn Ballers',
+          location: 'Brooklyn, NY',
+          photo: 'images/brooklyn_ballers.jpg',
+          amount_raised: 5000,
+          description: `A dedicated high school girls' basketball team known for their hard work 
                 and sportsmanship. The fundraising allowed the team to upgrade their training equipment, 
                 purchase new uniforms, and afford travel expenses for regional tournaments. It also 
                 helped cover coaching clinics, providing the players with better development opportunities 
-                and increasing their chances of earning college scholarships.`
-            }
-        ];
-        const NUM_TEAMS = 5;
+                and increasing their chances of earning college scholarships.`,
+        },
+      ]
+      const NUM_TEAMS = 5
 
-        let index = 0;
-        function displayTeam(team) {
-            // Fade out the current team info
-            $("#team-display").fadeOut(700, function() {
-                // Once fade out is complete, update the content
-                $("#team-display").html(`
+      let index = 0
+      function displayTeam(team) {
+        // Fade out the current team info
+        $('#team-display').fadeOut(700, function () {
+          // Once fade out is complete, update the content
+          $('#team-display').html(`
                     <h2>${team.team_name}</h2>
                     <img src="${team.photo}" alt="${team.team_name}">
                     <p><strong>League:</strong> ${team.league_name}</p>
                     <p><strong>Location:</strong> ${team.location}</p>
                     <p><strong>Amount Raised:</strong> $${team.amount_raised.toLocaleString()}</p>
                     <p>${team.description}</p>
-                `);
+                `)
 
-                // Fade in the new content
-                $("#team-display").fadeIn(700);
-            });
-        }
+          // Fade in the new content
+          $('#team-display').fadeIn(700)
+        })
+      }
 
-        $(document).ready(function() {
-            $("#previous").click(function() {
-                index = (index - 1) >= 0 ? index - 1 : NUM_TEAMS - 1;
-                displayTeam(teams[index]);
-            });
+      $(document).ready(function () {
+        $('#previous').click(function () {
+          index = index - 1 >= 0 ? index - 1 : NUM_TEAMS - 1
+          displayTeam(teams[index])
+        })
 
-            $("#next").click(function() {
-                index = (index + 1) % NUM_TEAMS;
-                displayTeam(teams[index]);
-            });
+        $('#next').click(function () {
+          index = (index + 1) % NUM_TEAMS
+          displayTeam(teams[index])
+        })
 
-            displayTeam(teams[index]);
-        }); 
+        displayTeam(teams[index])
+      })
 
-        document.addEventListener("DOMContentLoaded", function() {
-            const menuToggle = document.querySelector(".menu-toggle");
-            const menu = document.querySelector(".menu");
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuToggle = document.querySelector('.menu-toggle')
+        const menu = document.querySelector('.menu')
 
-            menuToggle.addEventListener("click", function() {
-                menu.classList.toggle("active");
-            });
-        });
+        menuToggle.addEventListener('click', function () {
+          menu.classList.toggle('active')
+        })
+      })
     </script>
 
-<!-- Get style for this later -->
-    <h1>Testimonials</h1> 
-    <h3>Click through this slideshow to read about some teams who fundraised through us!</h3>
+    <!-- Get style for this later -->
+    <h1>Testimonials</h1>
+    <h3>
+      Click through this slideshow to read about some teams who fundraised
+      through us!
+    </h3>
 
     <div class="button-cont">
-        <button class="nav-button" id="previous">&lArr; Previous</button>
-        <button class="nav-button" id="next">Next &rArr;</button>
+      <button class="nav-button" id="previous">&lArr; Previous</button>
+      <button class="nav-button" id="next">Next &rArr;</button>
     </div>
 
     <div id="team-display" class="team-display">
-        <!-- populated by Javascript code above -->
+      <!-- populated by Javascript code above -->
     </div>
 
     <br />
     <footer>
-        <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
+      <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
