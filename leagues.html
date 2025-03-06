@@ -29,7 +29,7 @@
 
       /* League Container Styling */
 
-      .leaderboard-container {
+      .league-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -175,12 +175,15 @@
           <i class="fas fa-handshake"></i> Become a Fundraiser
         </button>
       </div>
-      <div id="leaderboard-container" class="leaderboard-container"></div>
+      <div id="league-container" class="league-container"></div>
     </div>
 
     <script>
+      function onSelect(id) {
+        window.location.href = 'teams.html?league=' + id
+      }
       $(document).ready(function () {
-        $.get('leagues.json', function (data) {
+        $.get('data/leagues.json', function (data) {
           leagues = data
           let output = ''
           leagues.forEach((league) => {
@@ -188,10 +191,10 @@
                   <img src=${league.img} alt="League Logo" />
                   <h2>${league.name}</h2>
                   <p class="funds-raised">$${league.fundraised} Collected</p>
-                  <button class="select-btn">Select</button>
+                  <button onClick="onSelect(this.id)" id=${league.id} class="select-btn">Select</button>
               </div>`
           })
-          $('#leaderboard-container').html(output)
+          $('#league-container').html(output)
         })
       })
     </script>

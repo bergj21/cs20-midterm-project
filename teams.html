@@ -5,9 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team</title>
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .container {
+        max-width: 1100px;
+        margin: 10px auto;
+      }
+
+      .leaderboard {
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .leaderboard-item {
+        width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        background-color: #f0f4f8;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .leaderboard-item img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      .rank {
+        color: orange;
+        font-size: 30px;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+
+      .team-info {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+
+      .team-name {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .amount {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
-    <!-- Fixed Header -->
     <header>
       <a href="index.html">
         <img src="images/logo.jpg" alt="Logo" class="logo" />
@@ -37,7 +95,44 @@
       })
     </script>
 
-    <div>Team Page</div>
+    <div class="container">
+      <h1>Leaderboard</h1>
+      <div id="leaderboard"></div>
+
+      <script>
+        function getQueryParam(param) {
+          var urlParams = new URLSearchParams(window.location.search)
+          return urlParams.get(param)
+        }
+
+        var leagueId = getQueryParam('league')
+
+        $(document).ready(function () {
+          $.get(`data/league${leagueId}.json`)
+            .done(function (league) {
+              league.sort((a, b) => b.donations - a.donations)
+              let output = ''
+              league.forEach((team, index) => {
+                output += `<div class="leaderboard-item">
+                    <span class="rank">${index + 1}</span>
+                    <div class="team-info">
+                        <img src='images/team-logos/${
+                          team.logo
+                        }' alt="Team Logo">
+                        <span class="team-name">${team.name}</span>
+                    </div>
+                    <span style="margin-right: 20px"">Total Fundraised</span>
+                    <span class="amount">$${team.donations}</span>
+                </div>`
+              })
+              $('#leaderboard').html(output)
+            })
+            .fail(function () {
+              window.location.href = '/invalid-page'
+            })
+        })
+      </script>
+    </div>
 
     <footer>
       <p>&copy; 2025 HoopFund. All Rights Reserved.</p>

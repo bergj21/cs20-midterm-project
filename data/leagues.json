@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "name": "New York State AAU League",
     "img": "images/league-logos/new-york-state-league.jpg",
     "description": "A competitive AAU league featuring top youth basketball teams across New York State.",
@@ -7,6 +8,7 @@
     "teams": ["New City Hoopers", "Rockland Raptors", "Hudson Valley Thunder"]
   },
   {
+    "id": 2,
     "name": "Hudson Valley Youth League",
     "img": "images/league-logos/hudson-valley-league.jpg",
     "description": "Fostering young basketball talent across the Hudson Valley with top-tier training and tournaments.",
@@ -14,6 +16,7 @@
     "teams": ["Hudson Valley Storm", "Poughkeepsie Panthers", "Beacon Ballers"]
   },
   {
+    "id": 3,
     "name": "Tri-State Elite League",
     "img": "images/league-logos/tri-state-elite-league.jpg",
     "description": "A premier youth basketball league bringing together teams from New York, New Jersey, and Connecticut.",
@@ -21,6 +24,7 @@
     "teams": ["Tri-State Titans", "NYC Ballers", "Garden State Warriors"]
   },
   {
+    "id": 4,
     "name": "Metro Hoops League",
     "img": "images/league-logos/metro-hoops-league.jpg",
     "description": "An exciting urban basketball league featuring the best teams from the NYC metropolitan area.",
@@ -28,6 +32,7 @@
     "teams": ["Brooklyn Bombers", "Queens Lightning", "Harlem Hustlers"]
   },
   {
+    "id": 5,
     "name": "Empire State Youth League",
     "img": "images/league-logos/empire-state-league.jpg",
     "description": "A statewide league dedicated to youth basketball development and competition in New York.",
