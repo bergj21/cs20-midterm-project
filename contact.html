@@ -14,10 +14,8 @@
 
       /* Main Content Area */
       .content {
-        min-height: 100vh;
         display: flex;
         justify-content: center;
-        align-items: center;
         padding: 0 20px;
       }
 
@@ -30,14 +28,6 @@
         max-width: 600px;
         width: 100%;
         text-align: left;
-      }
-
-      .contact-container h1 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 20px;
-        color: #333;
-        font-weight: bold;
       }
 
       /* Form Styling */
@@ -163,7 +153,7 @@
         }
         let email = document.getElementById('email').value
         if (email === '') {
-          error += '\n    Your Email:,'
+          error += '\n    Your Email:'
           valid = false
         }
 
@@ -173,7 +163,7 @@
             valid = false
           }
           if (document.getElementById('league').value === '') {
-            error += '\n    League:,'
+            error += '\n    League:'
             valid = false
           }
           if (
@@ -225,9 +215,10 @@
       })
     </script>
 
+    <main>
+    <h1>Contact Us</h1>
     <div class="content">
       <div class="contact-container">
-        <h1>Contact Us</h1>
         <form action="#" method="POST" id="contact-form">
           <label for="name">Your Name:</label>
           <input
@@ -307,6 +298,7 @@
         </form>
       </div>
     </div>
+    </main>
 
     <footer>
       <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
