@@ -16,9 +16,9 @@
     />
 
     <style>
+
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
         text-align: center;
       }
 
@@ -53,7 +53,8 @@
         margin-bottom: 10px;
       }
 
-      .league-card h2 {
+      .league-card h4 {
+        color: var(--gray-color);
         font-size: 20px;
         margin: 10px 0;
       }
@@ -68,7 +69,7 @@
       /* Search Container Styling */
 
       .select-btn {
-        background-color: red;
+        background-color: var(--orange-color);
         color: white;
         padding: 10px 15px;
         border: none;
@@ -79,7 +80,7 @@
       }
 
       .select-btn:hover {
-        background-color: darkred;
+        background-color: var(--dark-orange-color);
       }
 
       .search-container {
@@ -113,7 +114,7 @@
       }
 
       .fundraiser-btn {
-        background-color: #e53935;
+        background-color: var(--orange-color);
         color: white;
         border: none;
         padding: 10px 15px;
@@ -131,7 +132,7 @@
       }
 
       .fundraiser-btn:hover {
-        background-color: #c62828;
+        background-color: var(--dark-orange-color);
       }
     </style>
     <script>
@@ -165,6 +166,7 @@
       </nav>
     </header>
 
+    <main>
     <div class="container">
       <div class="search-container">
         <div class="search-bar">
@@ -177,6 +179,7 @@
       </div>
       <div id="league-container" class="league-container"></div>
     </div>
+    </main>
 
     <script>
       function onSelect(id) {
@@ -189,7 +192,7 @@
           leagues.forEach((league) => {
             output += `<div class="league-card">
                   <img src=${league.img} alt="League Logo" />
-                  <h2>${league.name}</h2>
+                  <h4>${league.name}</h4>
                   <p class="funds-raised">$${league.fundraised} Collected</p>
                   <button onClick="onSelect(this.id)" id=${league.id} class="select-btn">Select</button>
               </div>`
@@ -198,6 +201,7 @@
         })
       })
     </script>
+    
 
     <footer>
       <p>&copy; 2025 HoopFund. All Rights Reserved.</p>

@@ -9,12 +9,13 @@
     <style>
       .button-cont {
         display: flex;
-        justify-content: space-between; /* Places one button on each side */
-        padding: 0 50px; /* Adds some spacing from the edges */
+        justify-content: center; /* Places one button on each side */
+        gap: 50px; /* Adds some spacing from the edges */
       }
-
+  
+      /* Button styles */
       .nav-button {
-        background-color: var(--orange-color); /* Primary blue color */
+        background-color: var(--orange-color); 
         color: white;
         padding: 12px 24px;
         font-size: 16px;
@@ -25,7 +26,6 @@
         transition: all 0.3s ease-in-out;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
       }
-
       .nav-button:hover {
         background-color: var(--dark-orange-color);
         transform: scale(1.05);
@@ -40,7 +40,7 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        width: 80%; /* Set width to 80% of the page */
+        width: 60%; 
         max-width: 1200px; /* Optional: Prevent it from getting too wide */
         margin: auto; /* Centers it on the page */
         text-align: left;
@@ -193,12 +193,8 @@
       })
     </script>
 
-    <!-- Get style for this later -->
+    <main>
     <h1>Testimonials</h1>
-    <h3>
-      Click through this slideshow to read about some teams who fundraised
-      through us!
-    </h3>
 
     <div class="button-cont">
       <button class="nav-button" id="previous">&lArr; Previous</button>
@@ -210,6 +206,10 @@
     </div>
 
     <br />
+    <br />
+    </main>
+
+
     <footer>
       <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
     </footer>
