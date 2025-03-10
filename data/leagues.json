@@ -9,34 +9,36 @@
   },
   {
     "id": 2,
-    "name": "Hudson Valley Youth League",
-    "img": "images/league-logos/hudson-valley-league.jpg",
-    "description": "Fostering young basketball talent across the Hudson Valley with top-tier training and tournaments.",
+    "name": "Golden State Youth League",
+    "img": "images/league-logos/GS.jpeg",
+    "description": "Developing young basketball talent across California with top-tier training and tournaments.",
     "fundraised": 9300,
-    "teams": ["Hudson Valley Storm", "Poughkeepsie Panthers", "Beacon Ballers"]
+    "teams": ["Los Angeles Lightning", "San Francisco Flames", "Sacramento Stallions"]
   },
   {
     "id": 3,
-    "name": "Tri-State Elite League",
-    "img": "images/league-logos/tri-state-elite-league.jpg",
-    "description": "A premier youth basketball league bringing together teams from New York, New Jersey, and Connecticut.",
+    "name": "Lone Star Elite League",
+    "img": "images/league-logos/LLS.jpeg",
+    "description": "A premier youth basketball league showcasing the best teams from across Texas.",
     "fundraised": 13550,
-    "teams": ["Tri-State Titans", "NYC Ballers", "Garden State Warriors"]
+    "teams": ["Houston Hurricanes", "Dallas Dribblers", "Austin Avengers"]
   },
   {
     "id": 4,
-    "name": "Metro Hoops League",
-    "img": "images/league-logos/metro-hoops-league.jpg",
-    "description": "An exciting urban basketball league featuring the best teams from the NYC metropolitan area.",
+    "name": "Windy City Hoops League",
+    "img": "images/league-logos/Windy.jpeg",
+    "description": "An exciting urban basketball league featuring the best teams from the Chicago metropolitan area.",
     "fundraised": 7500,
-    "teams": ["Brooklyn Bombers", "Queens Lightning", "Harlem Hustlers"]
+    "teams": ["Chicago Challengers", "Naperville Knights", "Evanston Elite"]
   },
   {
     "id": 5,
-    "name": "Empire State Youth League",
-    "img": "images/league-logos/empire-state-league.jpg",
-    "description": "A statewide league dedicated to youth basketball development and competition in New York.",
+    "name": "Bayou State Youth League",
+    "img": "images/league-logos/Bayou.jpeg",
+    "description": "A statewide league dedicated to youth basketball development and competition in Louisiana.",
     "fundraised": 16800,
-    "teams": ["Albany Eagles", "Buffalo Braves", "Syracuse Stars"]
+    "teams": ["New Orleans Navigators", "Baton Rouge Blaze", "Shreveport Sharpshooters"]
   }
 ]
+
+  

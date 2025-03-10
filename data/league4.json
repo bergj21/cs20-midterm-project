@@ -1,63 +1,63 @@
 [
     {
       "id": 1,
-      "name": "Brooklyn Bombers",
-      "logo": "brooklyn-bombers.jpg",
-      "location": "Brooklyn, NY",
-      "description": "A powerhouse basketball team from Brooklyn, known for their speed and precision. Support us on our journey to the championship!",
+      "name": "Chicago Challengers",
+      "logo": "Challengers.jpeg",
+      "location": "Chicago, IL",
+      "description": "A determined team from the heart of Chicago, pushing limits and striving for greatness.",
       "roster": [
-        "Jaden Robinson",
-        "Malik Thompson",
-        "Andre Lewis",
-        "Shawn Carter",
-        "Derrick Simmons",
-        "Isaiah Johnson",
-        "Trey Williams",
-        "Marcus Allen",
-        "Dwayne Harris",
-        "Jamal White"
+        "Anthony Carter",
+        "Roman Baker",
+        "Blake Sanders",
+        "Victor Bennett",
+        "Elliot Price",
+        "Ryder Coleman",
+        "Jason Butler",
+        "Axel Morris",
+        "Emmett Bailey",
+        "Gavin Scott"
       ],
-      "donations": 3150
+      "donations": 5100
     },
     {
       "id": 2,
-      "name": "Queens Lightning",
-      "logo": "queens-lightning.jpg",
-      "location": "Queens, NY",
-      "description": "A fast-paced team from Queens, electrifying the court with unmatched energy and teamwork.",
+      "name": "Naperville Knights",
+      "logo": "Knights.jpeg",
+      "location": "Naperville, IL",
+      "description": "A talented squad from Naperville, competing with heart and hustle. Join us in our mission!",
       "roster": [
-        "Chris Rodriguez",
-        "Nathaniel King",
-        "Jordan Lopez",
-        "Kevin Martinez",
-        "Samuel Torres",
-        "Victor Diaz",
-        "Adrian Gonzalez",
-        "Leo Fernandez",
-        "Brian Perez",
-        "Damian Cruz"
+        "Zane Clark",
+        "Asher Turner",
+        "Sawyer Wood",
+        "Finn Ramirez",
+        "Beckett Foster",
+        "Charlie Gomez",
+        "Theo Ward",
+        "Jameson Powell",
+        "Andre Henderson",
+        "Brady Torres"
       ],
-      "donations": 1950
+      "donations": 2800
     },
     {
       "id": 3,
-      "name": "Harlem Hustlers",
-      "logo": "harlem-hustlers.jpg",
-      "location": "Harlem, NY",
-      "description": "A dynamic team from Harlem, blending skill and strategy to dominate the competition.",
+      "name": "Evanston Elite",
+      "logo": "Elite.jpeg",
+      "location": "Evanston, IL",
+      "description": "A competitive and skilled basketball team from Evanston, aiming for the top.",
       "roster": [
-        "Elijah Brown",
-        "Cameron Scott",
-        "Josiah Wright",
-        "Jaylen Walker",
-        "Devin Young",
-        "Bryce Adams",
-        "Avery Mitchell",
-        "Zion Carter",
-        "Miles Green",
-        "Tristan Howard"
+        "Max Carter",
+        "Dylan Ross",
+        "Theo Perez",
+        "Nolan Bell",
+        "Lukas Cox",
+        "Bentley Hughes",
+        "Everett Stone",
+        "Marcus Bryant",
+        "Seth Allen",
+        "Jonah Hayes"
       ],
-      "donations": 2400
+      "donations": 3300
     }
   ]
   
