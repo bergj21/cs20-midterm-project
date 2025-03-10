@@ -10,6 +10,10 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <style>
       .container {
         max-width: 1100px;
@@ -22,15 +26,34 @@
         overflow: hidden;
       }
 
-      .leaderboard-item {
+      .leaderboard-item-container p {
+        font-family: 'Times New Roman', sans-serif;
+        text-align: center;
+      }
+
+      .leaderboard-item-container h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+
+      .leaderboard-dropdown {
+        display: none;
+        margin-top: 10px;
+        border-top: solid 1px var(--gray-color);
+      }
+
+      .leaderboard-item-container {
+        background-color: #f0f4f8;
         width: 700px;
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 8px;
+      }
+
+      .leaderboard-item {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px;
-        background-color: #f0f4f8;
-        border-radius: 8px;
-        margin-bottom: 10px;
       }
 
       .leaderboard-item img {
@@ -96,44 +119,90 @@
     </script>
 
     <main>
-    <div class="container">
-      <h1>Leaderboard</h1>
-      <div id="leaderboard"></div>
+      <div class="container">
+        <h1>Leaderboard</h1>
+        <h2 id="league-name"></h2>
+        <div id="leaderboard"></div>
+        <script>
+          function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search)
+            return urlParams.get(param)
+          }
 
-      <script>
-        function getQueryParam(param) {
-          var urlParams = new URLSearchParams(window.location.search)
-          return urlParams.get(param)
-        }
+          var leagueId = getQueryParam('league')
 
-        var leagueId = getQueryParam('league')
+          $(document).ready(function () {
+            $.get('data/leagues.json', (leagues) => {
+              let league = leagues.find((league) => league.id == leagueId)
+              $('#league-name').html(`${league.name}`)
+            })
 
-        $(document).ready(function () {
-          $.get(`data/league${leagueId}.json`)
-            .done(function (league) {
-              league.sort((a, b) => b.donations - a.donations)
-              let output = ''
-              league.forEach((team, index) => {
-                output += `<div class="leaderboard-item">
-                    <span class="rank">${index + 1}</span>
-                    <div class="team-info">
-                        <img src='images/team-logos/${
-                          team.logo
-                        }' alt="Team Logo">
-                        <span class="team-name">${team.name}</span>
-                    </div>
-                    <span style="margin-right: 20px"">Total Fundraised</span>
-                    <span class="amount">$${team.donations}</span>
-                </div>`
+            $.get(`data/league${leagueId}.json`)
+              .done(function (league) {
+                league.sort((a, b) => b.donations - a.donations)
+                let output = ''
+                league.forEach((team, index) => {
+                  output += `
+                                        <div class="leaderboard-item-container">
+                                          <div class="leaderboard-item">
+                                            <span class="rank">${
+                                              index + 1
+                                            }</span>
+                                            <div class="team-info">
+                                              <img
+                                                src="images/team-logos/${
+                                                  team.logo
+                                                }"
+                                                alt="Team Logo"
+                                              />
+                                              <span class="team-name">${
+                                                team.name
+                                              }</span>
+                                            </div>
+                                            <span style="margin-right: 20px">Total Fundraised</span>
+                                            <span class="amount">${
+                                              team.donations
+                                            }</span>
+                                            <i
+                                              class="fa-solid fa-angle-up toggle-icon"
+                                              style="margin-left: 30px; cursor: pointer"
+                                            ></i>
+                                          </div>
+                                          <div id="leaderboard-dropdown-${leagueId}" class="leaderboard-dropdown">
+                                            <p style="text-align: right; font-weight: 600">${
+                                              team.location
+                                            }</p>
+                                            <p>${team.description}</p>
+                                            <h3>Roster</h3>
+                                            <p>
+                                            ${JSON.stringify(team.roster)
+                                              .replace(/["{}\[\]]/g, '')
+                                              .replace(/,/g, ', ')}
+                                            </p>
+                                          </div>
+                                        </div>`
+                })
+                $('#leaderboard').html(output)
+                $('.toggle-icon').on('click', function () {
+                  const icon = $(this)
+                  const parent = icon.closest('.leaderboard-item')
+                  const dropdown = parent.siblings('.leaderboard-dropdown')
+
+                  dropdown.slideToggle()
+
+                  if (dropdown.is(':visible')) {
+                    icon.removeClass('fa-angle-up').addClass('fa-angle-down')
+                  } else {
+                    icon.removeClass('fa-angle-down').addClass('fa-angle-up')
+                  }
+                })
               })
-              $('#leaderboard').html(output)
-            })
-            .fail(function () {
-              window.location.href = '/invalid-page'
-            })
-        })
-      </script>
-    </div>
+              .fail(function () {
+                window.location.href = '/invalid-page'
+              })
+          })
+        </script>
+      </div>
     </main>
 
     <footer>
