@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Albany Eagles",
+      "logo": "albany-eagles.jpg",
+      "location": "Albany, NY",
+      "description": "A competitive youth basketball team representing Albany with skill and passion. Help us soar to new heights!",
+      "roster": [
+        "Ethan Walker",
+        "James Carter",
+        "Samuel Harris",
+        "Daniel Lewis",
+        "Joseph Martinez",
+        "David Robinson",
+        "Benjamin Allen",
+        "Matthew Scott",
+        "Alexander Thomas",
+        "Christopher White"
+      ],
+      "donations": 3400
+    },
+    {
+      "id": 2,
+      "name": "Buffalo Braves",
+      "logo": "buffalo-braves.jpg",
+      "location": "Buffalo, NY",
+      "description": "A determined squad from Buffalo aiming to compete at the highest level. Support our team as we take on the best!",
+      "roster": [
+        "Liam Johnson",
+        "Michael Wilson",
+        "Ryan King",
+        "Joshua Green",
+        "Andrew Baker",
+        "Tyler Wright",
+        "Logan Perez",
+        "Nicholas Hall",
+        "Dylan Young",
+        "Jacob Nelson"
+      ],
+      "donations": 8400
+    },
+    {
+      "id": 3,
+      "name": "Syracuse Stars",
+      "logo": "syracuse-stars.jpg",
+      "location": "Syracuse, NY",
+      "description": "A rising team from Syracuse, bringing teamwork and dedication to every game. Help us shine bright this season!",
+      "roster": [
+        "William Edwards",
+        "Mason Torres",
+        "Jayden Ramirez",
+        "Elijah Reed",
+        "Owen Brooks",
+        "Henry Cox",
+        "Sebastian Ward",
+        "Cameron Sanders",
+        "Julian Long",
+        "Aaron Fisher"
+      ],
+      "donations": 5000
+    }
+  ]
+  

@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Brooklyn Bombers",
+      "logo": "brooklyn-bombers.jpg",
+      "location": "Brooklyn, NY",
+      "description": "A powerhouse basketball team from Brooklyn, known for their speed and precision. Support us on our journey to the championship!",
+      "roster": [
+        "Jaden Robinson",
+        "Malik Thompson",
+        "Andre Lewis",
+        "Shawn Carter",
+        "Derrick Simmons",
+        "Isaiah Johnson",
+        "Trey Williams",
+        "Marcus Allen",
+        "Dwayne Harris",
+        "Jamal White"
+      ],
+      "donations": 3150
+    },
+    {
+      "id": 2,
+      "name": "Queens Lightning",
+      "logo": "queens-lightning.jpg",
+      "location": "Queens, NY",
+      "description": "A fast-paced team from Queens, electrifying the court with unmatched energy and teamwork.",
+      "roster": [
+        "Chris Rodriguez",
+        "Nathaniel King",
+        "Jordan Lopez",
+        "Kevin Martinez",
+        "Samuel Torres",
+        "Victor Diaz",
+        "Adrian Gonzalez",
+        "Leo Fernandez",
+        "Brian Perez",
+        "Damian Cruz"
+      ],
+      "donations": 1950
+    },
+    {
+      "id": 3,
+      "name": "Harlem Hustlers",
+      "logo": "harlem-hustlers.jpg",
+      "location": "Harlem, NY",
+      "description": "A dynamic team from Harlem, blending skill and strategy to dominate the competition.",
+      "roster": [
+        "Elijah Brown",
+        "Cameron Scott",
+        "Josiah Wright",
+        "Jaylen Walker",
+        "Devin Young",
+        "Bryce Adams",
+        "Avery Mitchell",
+        "Zion Carter",
+        "Miles Green",
+        "Tristan Howard"
+      ],
+      "donations": 2400
+    }
+  ]
+  

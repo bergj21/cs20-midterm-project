@@ -4,7 +4,7 @@
     "name": "New York State AAU League",
     "img": "images/league-logos/new-york-state-league.jpg",
     "description": "A competitive AAU league featuring top youth basketball teams across New York State.",
-    "fundraised": 1250,
+    "fundraised": 5500,
     "teams": ["New City Hoopers", "Rockland Raptors", "Hudson Valley Thunder"]
   },
   {
@@ -12,7 +12,7 @@
     "name": "Hudson Valley Youth League",
     "img": "images/league-logos/hudson-valley-league.jpg",
     "description": "Fostering young basketball talent across the Hudson Valley with top-tier training and tournaments.",
-    "fundraised": 750,
+    "fundraised": 9300,
     "teams": ["Hudson Valley Storm", "Poughkeepsie Panthers", "Beacon Ballers"]
   },
   {
@@ -20,7 +20,7 @@
     "name": "Tri-State Elite League",
     "img": "images/league-logos/tri-state-elite-league.jpg",
     "description": "A premier youth basketball league bringing together teams from New York, New Jersey, and Connecticut.",
-    "fundraised": 1800,
+    "fundraised": 13550,
     "teams": ["Tri-State Titans", "NYC Ballers", "Garden State Warriors"]
   },
   {
@@ -28,7 +28,7 @@
     "name": "Metro Hoops League",
     "img": "images/league-logos/metro-hoops-league.jpg",
     "description": "An exciting urban basketball league featuring the best teams from the NYC metropolitan area.",
-    "fundraised": 950,
+    "fundraised": 7500,
     "teams": ["Brooklyn Bombers", "Queens Lightning", "Harlem Hustlers"]
   },
   {
@@ -36,7 +36,7 @@
     "name": "Empire State Youth League",
     "img": "images/league-logos/empire-state-league.jpg",
     "description": "A statewide league dedicated to youth basketball development and competition in New York.",
-    "fundraised": 1300,
+    "fundraised": 16800,
     "teams": ["Albany Eagles", "Buffalo Braves", "Syracuse Stars"]
   }
 ]

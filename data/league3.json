@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Tri-State Titans",
+      "logo": "tri-state-titans.jpg",
+      "location": "Tri-State Area",
+      "description": "A dominant force in youth basketball, uniting top talent from NY, NJ, and CT. Support our championship run!",
+      "roster": [
+        "Jordan Simmons",
+        "Ethan Wallace",
+        "Liam Carter",
+        "Noah Bryant",
+        "Mason Rodriguez",
+        "Lucas Foster",
+        "Owen Hayes",
+        "Aiden Scott",
+        "Caleb Turner",
+        "Nathan Foster"
+      ],
+      "donations": 2500
+    },
+    {
+      "id": 2,
+      "name": "NYC Ballers",
+      "logo": "nyc-ballers.jpg",
+      "location": "New York City, NY",
+      "description": "A gritty, high-energy team representing the heart of NYC basketball. Help us keep the legacy alive!",
+      "roster": [
+        "Brayden Lewis",
+        "Logan Adams",
+        "Connor Evans",
+        "Dylan Brooks",
+        "Hunter Collins",
+        "Landon Reed",
+        "Eli Parker",
+        "Carter Hayes",
+        "Austin Rogers",
+        "Tyler James"
+      ],
+      "donations": 8000
+    },
+    {
+      "id": 3,
+      "name": "Garden State Warriors",
+      "logo": "garden-state-warriors.jpg",
+      "location": "New Jersey",
+      "description": "A tenacious team from the Garden State, focused on teamwork and skill development. Your support fuels our success!",
+      "roster": [
+        "Jayden Martinez",
+        "Gabriel Rivera",
+        "Anthony Brown",
+        "Sebastian Torres",
+        "Xavier Lopez",
+        "Nathaniel Ramirez",
+        "Benjamin Cruz",
+        "Jonathan Ortiz",
+        "Christian Hernandez",
+        "Dominic Gonzalez"
+      ],
+      "donations": 3050
+    }
+  ]
+  
