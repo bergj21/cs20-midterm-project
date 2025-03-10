@@ -15,67 +15,6 @@
         height: 100vh;
         overflow-x: hidden; /* Prevent horizontal scrolling */
       }
-
-      /* Main Content Area */
-      .content {
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
-      }
-
-      /* Contact Form Container */
-      .contact-container {
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        max-width: 600px;
-        width: 100%;
-      }
-
-      /* Form Inputs Styling */
-      .contact-container label {
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 8px;
-        text-align: left;
-        display: block;
-      }
-
-      .contact-container input,
-      .contact-container textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-        color: #333;
-        background-color: #fafafa;
-      }
-
-      .contact-container input:focus,
-      .contact-container textarea:focus {
-        border-color: #ff6f00;
-        outline: none;
-      }
-
-      .contact-container button {
-        width: 100%;
-        padding: 14px;
-        font-size: 18px;
-        background-color: #ff6f00;
-        border: none;
-        border-radius: 8px;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .contact-container button:hover {
-        background-color: #d65a00;
-      }
     </style>
   </head>
   <body>
@@ -100,8 +39,8 @@
 
     <main>
     <h1>Donate Today</h1>
-    <div class="content">
-      <div class="contact-container">
+    <div class="form-content">
+      <div class="form-container">
         <form action="#" method="POST">
           <label for="name">Your Name:</label>
           <input

@@ -7,92 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        font-family: Arial, sans-serif;
         text-align: center;
-        /* margin: 40?spx; */
-      }
-
-      /* Main Content Area */
-      .content {
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
-      }
-
-      /* Contact Form Container */
-      .contact-container {
-        background-color: rgba(255, 255, 255, 0.9);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        max-width: 600px;
-        width: 100%;
-        text-align: left;
-      }
-
-      /* Form Styling */
-      .contact-container label {
-        font-size: 16px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 8px;
-        display: block;
-      }
-
-      .contact-container input,
-      .contact-container textarea {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 16px;
-        color: #333;
-        background-color: #fafafa;
-      }
-
-      .contact-container input:focus,
-      .contact-container textarea:focus {
-        border-color: #ff6f00;
-        outline: none;
-      }
-
-      /* Flex container for radio buttons */
-      .radio-group,
-      .checkbox-group {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 20px;
-        align-items: center; /* Ensure text is aligned with buttons */
-      }
-
-      .radio-group label,
-      .checkbox-group label {
-        display: flex;
-        align-items: center;
-        font-weight: normal;
-        gap: 5px;
-      }
-
-      .radio-group input,
-      .checkbox-group input {
-        margin: 0; /* Ensures proper alignment */
-      }
-
-      .contact-container button {
-        width: 100%;
-        padding: 14px;
-        font-size: 18px;
-        background-color: #ff6f00;
-        border: none;
-        border-radius: 8px;
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      .contact-container button:hover {
-        background-color: #d65a00;
       }
     </style>
   </head>
@@ -217,8 +132,8 @@
 
     <main>
     <h1>Contact Us</h1>
-    <div class="content">
-      <div class="contact-container">
+    <div class="form-content">
+      <div class="form-container">
         <form action="#" method="POST" id="contact-form">
           <label for="name">Your Name:</label>
           <input
