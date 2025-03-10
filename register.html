@@ -92,21 +92,21 @@
           <h2>Register Your Team</h2>
           <form action="#" method="POST" id="register-team-form">
             <label for="league">League Name:</label>
-            <input type="text" id="league" name="league" placeholder="Enter league name" required />
+            <input type="text" id="league" name="league" placeholder="Enter league name"/>
 
             <label for="team-name">Team Name:</label>
-            <input type="text" id="team-name" name="team-name" placeholder="Enter team name" required />
+            <input type="text" id="team-name" name="team-name" placeholder="Enter team name"/>
 
             <label for="team-description">Team Description:</label>
-            <input type="text" id="team-description" name="team-description" placeholder="Enter team description" required />
+            <textarea id="team-description" name="team-description" rows="4" placeholder="Enter team description"></textarea>
 
             <label for="email">Contact Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter contact email" required />
+            <input type="text" id="email" name="email" placeholder="Enter contact email"/>
 
             <label for="players">Players on Roster (comma-separated):</label>
-            <textarea id="players" name="players" rows="4" placeholder="Enter player names" required></textarea>
+            <textarea id="players" name="players" rows="4" placeholder="Enter player names"></textarea>
 
-            <button type="submit">Register Team</button>
+            <button type="submit" id="team-submit">Register Team</button>
           </form>
         </div>
 
@@ -115,18 +115,18 @@
           <h2>Register Your League</h2>
           <form action="#" method="POST" id="register-league-form">
             <label for="league-name">League Name:</label>
-            <input type="text" id="league-name" name="league-name" placeholder="Enter league name" required />
+            <input type="text" id="league-name" name="league-name" placeholder="Enter league name"/>
 
             <label for="league-description">League Description:</label>
-            <textarea id="league-description" name="league-description" rows="4" placeholder="Describe your league" required></textarea>
+            <textarea id="league-description" name="league-description" rows="4" placeholder="Describe your league"></textarea>
 
             <label for="league-email">Contact Email:</label>
-            <input type="email" id="league-email" name="league-email" placeholder="Enter contact email" required />
+            <input type="text" id="league-email" name="league-email" placeholder="Enter contact email"/>
 
             <label for="league-location">League Location:</label>
-            <input type="text" id="league-location" name="league-location" placeholder="Enter league location" required />
+            <input type="text" id="league-location" name="league-location" placeholder="Enter league location"/>
 
-            <button type="submit">Register League</button>
+            <button type="submit" id="league-submit">Register League</button>
           </form>
         </div>
       </div>
@@ -143,6 +143,98 @@
         menuToggle.addEventListener('click', function () {
           menu.classList.toggle('active')
         })
+
+        document.getElementById('register-team-form').addEventListener('submit', teamFormSubmitted)
+        document.getElementById('register-league-form').addEventListener('submit', leagueFormSubmitted)
+      }
+
+      function teamFormSubmitted(event) {
+        event.preventDefault() // Prevent form submission
+
+        let valid = true
+        let error = 'The following fields must be filled:'
+        if (document.getElementById('league').value === '') {
+          error += '\n    League Name:'
+          valid = false
+        }
+
+        if (document.getElementById('team-name').value === '') {
+          error += '\n    Team Name:'
+          valid = false
+        }
+
+        if (document.getElementById('team-description').value === '') {
+          error += '\n    Team Description:'
+          valid = false
+        }
+
+        let email = document.getElementById('email').value
+        if (email === '') {
+          error += '\n    Contact Email:'
+          valid = false
+        }
+
+        if (document.getElementById('players').value === '') {
+          error += '\n    Players on Roster (comma-separated):'
+          valid = false
+        }
+    
+        if (!valid) {
+          if (!email.includes('@') || !(email.indexOf('.') > email.indexOf('@'))) 
+          {
+            error += '\nAlso, the email you entered "' + email + '" is invalid.'
+          }
+          alert(error)
+        } else if (
+          !(email.includes('@') && email.indexOf('.') > email.indexOf('@'))
+        ) {
+          alert('The email you entered "' + email + '" is invalid.')
+        } else {
+          alert("Thank you for registering with us. We are setting your team up now.")
+          document.getElementById('register-team-form').reset() // TODO: maybe ask professor if this is okay instead of submitting
+        }
+      }
+
+      function leagueFormSubmitted(event) {
+        event.preventDefault() // Prevent form submission
+
+        let valid = true
+        let error = 'The following fields must be filled:'
+        if (document.getElementById('league-name').value === '') {
+          error += '\n    League Name:'
+          valid = false
+        }
+
+        if (document.getElementById('league-description').value === '') {
+          error += '\n    League Description:'
+          valid = false
+        }
+
+        let email = document.getElementById('league-email').value
+        if (email === '') {
+          error += '\n    Contact Email:'
+          valid = false
+        }
+
+        if (document.getElementById('league-location').value === '') {
+          error += '\n    League Location:'
+          valid = false
+        }
+    
+        if (!valid) {
+          if (!email.includes('@') || !(email.indexOf('.') > email.indexOf('@'))) 
+          {
+            error += '\nAlso, the email you entered "' + email + '" is invalid.'
+          }
+          alert(error)
+        } else if (
+          !(email.includes('@') && email.indexOf('.') > email.indexOf('@'))
+        ) {
+          alert('The email you entered "' + email + '" is invalid.')
+        } else {
+          alert("Thank you for registering with us. We are setting your league up now.")
+          document.getElementById('register-league-form').reset() // TODO: maybe ask professor if this is okay instead of submitting
+        }
       }
 
       function showForm(type) {

@@ -41,14 +41,13 @@
     <h1>Donate Today</h1>
     <div class="form-content">
       <div class="form-container">
-        <form action="#" method="POST">
+        <form action="#" method="POST" id="donate-form">
           <label for="name">Your Name:</label>
           <input
             type="text"
             id="name"
             name="name"
             placeholder="Enter your name"
-            required
           />
 
           <label for="email">Your Email:</label>
@@ -57,16 +56,32 @@
             id="email"
             name="email"
             placeholder="Enter your email"
-            required
           />
 
-          <label for="donation">Donation Amount:</label>
+          <label for="league">League:</label>
           <input
             type="text"
+            id="league"
+            name="league"
+            placeholder="Enter your team's league"
+          />
+
+          <label for="team">Team:</label>
+          <input
+            type="text"
+            id="team"
+            name="team"
+            placeholder="Enter the team you will donate to"
+          />
+
+          <label for="donation">Donation:</label>
+          <input
+            type="number"
             id="donation"
             name="donation"
+            min="1"
+            step="0.01"
             placeholder="Enter an amount"
-            required
           />
 
           <label for="message">Your Message (Optional):</label>
@@ -77,10 +92,12 @@
             placeholder="Write your message here"
           ></textarea>
 
-          <button type="submit">Donate Now</button>
+          <button type="submit" id="submit">Donate Now</button>
         </form>
       </div>
     </div>
+    <br />
+    <br />
     </main>
 
     <footer>
@@ -96,6 +113,55 @@
         menuToggle.addEventListener('click', function () {
           menu.classList.toggle('active')
         })
+
+        document.getElementById('donate-form').addEventListener('submit', formSubmitted)
+    }
+
+      function formSubmitted(event) {
+        event.preventDefault() // Prevent form submission
+
+        let valid = true
+        let error = 'The following fields must be filled:'
+        let name = document.getElementById('name').value
+        if (name === '') {
+          error += '\n    Your Name:'
+          valid = false
+        }
+        let email = document.getElementById('email').value
+        if (email === '') {
+          error += '\n    Your Email:'
+          valid = false
+        }
+
+        if (document.getElementById('league').value === '') {
+          error += '\n    League:'
+          valid = false
+        }
+
+        if (document.getElementById('team').value === '') {
+          error += '\n    Team:'
+          valid = false
+        }
+
+        if (document.getElementById('donation').value === '') {
+          error += '\n    Donation:'
+          valid = false
+        }
+    
+        if (!valid) {
+          if (!email.includes('@') || !(email.indexOf('.') > email.indexOf('@'))) 
+          {
+            error += '\nAlso, the email you entered "' + email + '" is invalid.'
+          }
+          alert(error)
+        } else if (
+          !(email.includes('@') && email.indexOf('.') > email.indexOf('@'))
+        ) {
+          alert('The email you entered "' + email + '" is invalid.')
+        } else {
+          alert("Thank you very much for your donation " + name + "!")
+          document.getElementById('donate-form').reset() // TODO: maybe ask professor if this is okay instead of submitting
+        }
       }
     </script>
   </body>
