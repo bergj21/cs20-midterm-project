@@ -36,7 +36,15 @@
       let teamYes
       let teamNo
 
-      window.onload = function () {
+      window.onload = function() {
+        // set up menu toggle for small screens
+        const menuToggle = document.querySelector('.menu-toggle')
+        const menu = document.querySelector('.menu')
+
+        menuToggle.addEventListener('click', function () {
+          menu.classList.toggle('active')
+        })
+
         teamInfo = document.getElementById('team-info')
         teamYes = document.getElementById('team-yes')
         teamNo = document.getElementById('team-no')
@@ -119,15 +127,6 @@
           document.getElementById('contact-form').reset() // TODO: maybe ask professor if this is okay instead of submitting
         }
       }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('.menu-toggle')
-        const menu = document.querySelector('.menu')
-
-        menuToggle.addEventListener('click', function () {
-          menu.classList.toggle('active')
-        })
-      })
     </script>
 
     <main>
