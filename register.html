@@ -5,9 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register</title>
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        flex-wrap: wrap;
+      }
+
+      .form-container {
+        display: none; /* Hidden by default */
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        width: 100%;
+        text-align: left;
+      }
+
+      .form-container.active {
+        display: block;
+      }
+
+      .form-container label {
+        font-size: 16px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .form-container input,
+      .form-container textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+        color: #333;
+        background-color: #fafafa;
+      }
+
+      .form-container button {
+        width: 100%;
+        padding: 14px;
+        font-size: 18px;
+        background-color: #ff6f00;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background-color: #d65a00;
+      }
+
+      .selection-buttons {
+        margin: 20px 0;
+      }
+
+      .selection-buttons button {
+        padding: 15px 25px;
+        font-size: 18px;
+        margin: 10px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .register-team {
+        background-color: #ff6f00;
+        color: white;
+      }
+
+      .register-team:hover {
+        background-color: #d65a00;
+      }
+
+      .register-league {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .register-league:hover {
+        background-color: #0056b3;
+      }
+
+      #team-image {
+        margin-top: 20px;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
   </head>
   <body>
-    <!-- Fixed Header -->
     <header>
       <a href="index.html">
         <img src="images/logo.jpg" alt="Logo" class="logo" />
@@ -26,20 +128,79 @@
       </nav>
     </header>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('.menu-toggle')
-        const menu = document.querySelector('.menu')
-
-        menuToggle.addEventListener('click', function () {
-          menu.classList.toggle('active')
-        })
-      })
-    </script>
-
     <main>
-        <div>Register Page</div>
+      <h1>Register</h1>
+      <div class="selection-buttons">
+        <button class="register-team" onclick="showForm('team')">Register a Team</button>
+        <button class="register-league" onclick="showForm('league')">Register a League</button>
+      </div>
+
+      <!-- Image that will disappear when a button is clicked -->
+      <img id="team-image" src="images/b-team.jpg" alt="Basketball Team" />
+
+      <div class="content">
+        <!-- Team Registration Form -->
+        <div class="form-container" id="team-form">
+          <h2>Register Your Team</h2>
+          <form action="#" method="POST" id="register-team-form">
+            <label for="league">League Name:</label>
+            <input type="text" id="league" name="league" placeholder="Enter league name" required />
+
+            <label for="team-name">Team Name:</label>
+            <input type="text" id="team-name" name="team-name" placeholder="Enter team name" required />
+
+            <label for="team-description">Team Description:</label>
+            <input type="text" id="team-description" name="team-description" placeholder="Enter team description" required />
+
+            <label for="email">Contact Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter contact email" required />
+
+            <label for="players">Players on Roster (comma-separated):</label>
+            <textarea id="players" name="players" rows="4" placeholder="Enter player names" required></textarea>
+
+            <button type="submit">Register Team</button>
+          </form>
+        </div>
+
+        <!-- League Registration Form -->
+        <div class="form-container" id="league-form">
+          <h2>Register Your League</h2>
+          <form action="#" method="POST" id="register-league-form">
+            <label for="league-name">League Name:</label>
+            <input type="text" id="league-name" name="league-name" placeholder="Enter league name" required />
+
+            <label for="league-description">League Description:</label>
+            <textarea id="league-description" name="league-description" rows="4" placeholder="Describe your league" required></textarea>
+
+            <label for="league-email">Contact Email:</label>
+            <input type="email" id="league-email" name="league-email" placeholder="Enter contact email" required />
+
+            <label for="league-location">League Location:</label>
+            <input type="text" id="league-location" name="league-location" placeholder="Enter league location" required />
+
+            <button type="submit">Register League</button>
+          </form>
+        </div>
+      </div>
     </main>
+
+    <script>
+      function showForm(type) {
+        // Hide the image
+        document.getElementById("team-image").style.display = "none";
+
+        // Hide both forms first
+        document.getElementById("team-form").classList.remove("active");
+        document.getElementById("league-form").classList.remove("active");
+
+        // Show the selected form
+        if (type === "team") {
+          document.getElementById("team-form").classList.add("active");
+        } else if (type === "league") {
+          document.getElementById("league-form").classList.add("active");
+        }
+      }
+    </script>
 
     <footer>
       <p>&copy; 2025 HoopFund. All Rights Reserved.</p>
