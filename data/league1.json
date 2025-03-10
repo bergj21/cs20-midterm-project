@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "name": "New City Hoopers",
     "logo": "new-city-hoopers.jpg",
     "location": "New City, NY",
@@ -20,7 +19,6 @@
     "donations": 1500
   },
   {
-    "id": 2,
     "name": "Rockland Raptors",
     "logo": "rockland-raptors.jpg",
     "location": "Rockland, NY",
@@ -40,7 +38,6 @@
     "donations": 1000
   },
   {
-    "id": 3,
     "name": "Hudson Valley Thunder",
     "logo": "hudson-valley-thunder.jpg",
     "location": "Hudson Valley, NY",
