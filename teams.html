@@ -188,13 +188,12 @@
                   const parent = icon.closest('.leaderboard-item')
                   const dropdown = parent.siblings('.leaderboard-dropdown')
 
-                  dropdown.slideToggle()
-
-                  if (dropdown.is(':visible')) {
+                  if (dropdown.css('display') == 'none') {
                     icon.removeClass('fa-angle-up').addClass('fa-angle-down')
                   } else {
                     icon.removeClass('fa-angle-down').addClass('fa-angle-up')
                   }
+                  dropdown.slideToggle()
                 })
               })
               .fail(function () {
