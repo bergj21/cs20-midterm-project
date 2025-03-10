@@ -1,63 +1,63 @@
 [
     {
       "id": 1,
-      "name": "Albany Eagles",
-      "logo": "albany-eagles.jpg",
-      "location": "Albany, NY",
-      "description": "A competitive youth basketball team representing Albany with skill and passion. Help us soar to new heights!",
+      "name": "New Orleans Navigators",
+      "logo": "Nvigators.jpeg",
+      "location": "New Orleans, LA",
+      "description": "A dynamic team from New Orleans, showcasing resilience and skill on the court.",
       "roster": [
-        "Ethan Walker",
-        "James Carter",
-        "Samuel Harris",
-        "Daniel Lewis",
-        "Joseph Martinez",
-        "David Robinson",
-        "Benjamin Allen",
-        "Matthew Scott",
-        "Alexander Thomas",
-        "Christopher White"
+        "Kai Thompson",
+        "Maverick Robinson",
+        "Griffin Foster",
+        "Ezekiel Bryant",
+        "Kingston Lewis",
+        "Beau Martinez",
+        "Jude Mitchell",
+        "Jax Wells",
+        "Theo Hudson",
+        "Malakai Parker"
       ],
-      "donations": 3400
+      "donations": 4800
     },
     {
       "id": 2,
-      "name": "Buffalo Braves",
-      "logo": "buffalo-braves.jpg",
-      "location": "Buffalo, NY",
-      "description": "A determined squad from Buffalo aiming to compete at the highest level. Support our team as we take on the best!",
+      "name": "Baton Rouge Blaze",
+      "logo": "Blaze.jpeg",
+      "location": "Baton Rouge, LA",
+      "description": "A fierce team from Baton Rouge, setting courts on fire with their passion for basketball.",
       "roster": [
-        "Liam Johnson",
-        "Michael Wilson",
-        "Ryan King",
-        "Joshua Green",
-        "Andrew Baker",
-        "Tyler Wright",
-        "Logan Perez",
-        "Nicholas Hall",
-        "Dylan Young",
-        "Jacob Nelson"
+        "Jett Sanders",
+        "Anderson Taylor",
+        "Cash Peterson",
+        "Zander Reed",
+        "Ronan Bailey",
+        "Remington Green",
+        "Knox Hill",
+        "Cohen Adams",
+        "Drew Russell",
+        "Tate Carter"
       ],
-      "donations": 8400
+      "donations": 3900
     },
     {
       "id": 3,
-      "name": "Syracuse Stars",
-      "logo": "syracuse-stars.jpg",
-      "location": "Syracuse, NY",
-      "description": "A rising team from Syracuse, bringing teamwork and dedication to every game. Help us shine bright this season!",
+      "name": "Shreveport Sharpshooters",
+      "logo": "Sharpshooters.jpeg",
+      "location": "Shreveport, LA",
+      "description": "A dedicated basketball squad from Shreveport, Louisiana, aiming for excellence.",
       "roster": [
-        "William Edwards",
-        "Mason Torres",
-        "Jayden Ramirez",
-        "Elijah Reed",
-        "Owen Brooks",
-        "Henry Cox",
-        "Sebastian Ward",
-        "Cameron Sanders",
-        "Julian Long",
-        "Aaron Fisher"
+        "Emerson Phillips",
+        "Ridge White",
+        "Gage Cooper",
+        "Tristan Harris",
+        "Hendrix Brooks",
+        "Jagger Price",
+        "Callum Bell",
+        "Sullivan Clark",
+        "Colt Hughes",
+        "Kane Watson"
       ],
-      "donations": 5000
+      "donations": 3600
     }
   ]
   

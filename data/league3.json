@@ -1,63 +1,63 @@
 [
     {
       "id": 1,
-      "name": "Tri-State Titans",
-      "logo": "tri-state-titans.jpg",
-      "location": "Tri-State Area",
-      "description": "A dominant force in youth basketball, uniting top talent from NY, NJ, and CT. Support our championship run!",
+      "name": "Houston Hurricanes",
+      "logo": "Hurricanes.jpeg",
+      "location": "Houston, TX",
+      "description": "A fierce team from Houston, ready to take on the competition with speed and strength. Support our journey!",
       "roster": [
-        "Jordan Simmons",
-        "Ethan Wallace",
-        "Liam Carter",
-        "Noah Bryant",
-        "Mason Rodriguez",
-        "Lucas Foster",
-        "Owen Hayes",
-        "Aiden Scott",
-        "Caleb Turner",
-        "Nathan Foster"
+        "Landon White",
+        "Dominic Green",
+        "Jordan Taylor",
+        "Sebastian Lewis",
+        "Grayson Walker",
+        "Xavier Mitchell",
+        "Evan Phillips",
+        "Connor Cooper",
+        "Hunter Bell",
+        "Christian Rogers"
       ],
-      "donations": 2500
+      "donations": 4200
     },
     {
       "id": 2,
-      "name": "NYC Ballers",
-      "logo": "nyc-ballers.jpg",
-      "location": "New York City, NY",
-      "description": "A gritty, high-energy team representing the heart of NYC basketball. Help us keep the legacy alive!",
+      "name": "Dallas Dribblers",
+      "logo": "Dribblrs.jpeg",
+      "location": "Dallas, TX",
+      "description": "A fast-paced, high-energy team from Dallas, showcasing top-tier youth basketball talent.",
       "roster": [
-        "Brayden Lewis",
-        "Logan Adams",
-        "Connor Evans",
-        "Dylan Brooks",
-        "Hunter Collins",
-        "Landon Reed",
-        "Eli Parker",
-        "Carter Hayes",
-        "Austin Rogers",
-        "Tyler James"
+        "Brayden Ross",
+        "Jonathan Diaz",
+        "Aaron Powell",
+        "Isaiah Flores",
+        "Charles Brooks",
+        "Austin James",
+        "Luis Campbell",
+        "Adrian Russell",
+        "Eli Patterson",
+        "Nicholas Murphy"
       ],
-      "donations": 8000
+      "donations": 2750
     },
     {
       "id": 3,
-      "name": "Garden State Warriors",
-      "logo": "garden-state-warriors.jpg",
-      "location": "New Jersey",
-      "description": "A tenacious team from the Garden State, focused on teamwork and skill development. Your support fuels our success!",
+      "name": "Austin Avengers",
+      "logo": "Avengers.jpeg",
+      "location": "Austin, TX",
+      "description": "A rising force in Texas youth basketball, known for their teamwork and determination.",
       "roster": [
-        "Jayden Martinez",
-        "Gabriel Rivera",
-        "Anthony Brown",
-        "Sebastian Torres",
-        "Xavier Lopez",
-        "Nathaniel Ramirez",
-        "Benjamin Cruz",
-        "Jonathan Ortiz",
-        "Christian Hernandez",
-        "Dominic Gonzalez"
+        "Bryce Watson",
+        "Colton Torres",
+        "Julian Reed",
+        "Nathaniel Fisher",
+        "Maxwell Howard",
+        "Diego Rivera",
+        "Jaxon Sullivan",
+        "Miles Morgan",
+        "Leo Bryant",
+        "Parker Hill"
       ],
-      "donations": 3050
+      "donations": 3200
     }
   ]
   

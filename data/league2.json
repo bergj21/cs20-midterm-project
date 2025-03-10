@@ -1,63 +1,63 @@
 [
-    {
-      "id": 1,
-      "name": "Hudson Valley Storm",
-      "logo": "hudson-valley-storm.jpg",
-      "location": "Hudson Valley, NY",
-      "description": "A fierce team representing the heart of Hudson Valley basketball. Support us in our quest for victory!",
-      "roster": [
-        "Liam Jackson",
-        "Ethan Ramirez",
-        "Aiden Thompson",
-        "Noah Scott",
-        "Mason Lewis",
-        "Lucas Walker",
-        "Owen Martinez",
-        "Caleb White",
-        "Nathan Hall",
-        "Ryan Green"
-      ],
-      "donations": 4500
-    },
-    {
-      "id": 2,
-      "name": "Poughkeepsie Panthers",
-      "logo": "poughkeepsie-panthers.jpg",
-      "location": "Poughkeepsie, NY",
-      "description": "A team of dedicated young athletes bringing speed and skill to the court. Help us reach the championships!",
-      "roster": [
-        "Jacob Gonzalez",
-        "Matthew Rivera",
-        "Michael Hernandez",
-        "Alexander Carter",
-        "Daniel Perez",
-        "James Roberts",
-        "Benjamin Johnson",
-        "William Evans",
-        "Joseph Young",
-        "David King"
-      ],
-      "donations": 1800
-    },
-    {
-      "id": 3,
-      "name": "Beacon Ballers",
-      "logo": "beacon-ballers.jpg",
-      "location": "Beacon, NY",
-      "description": "A rising basketball squad from Beacon, NY, known for their teamwork and determination. Help us on our journey!",
-      "roster": [
-        "Samuel Wright",
-        "Henry Adams",
-        "Carter Baker",
-        "Julian Nelson",
-        "Wyatt Reed",
-        "Isaac Torres",
-        "Levi Morris",
-        "Gabriel Jenkins",
-        "Christopher Simmons",
-        "Elijah Brooks"
-      ],
-      "donations": 3000
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Los Angeles Lightning",
+    "logo": "Lightning.jpeg",
+    "location": "Los Angeles, CA",
+    "description": "A powerhouse team from LA, bringing speed and skill to the court. Support us in our championship journey!",
+    "roster": [
+      "Liam Johnson",
+      "Ethan Gonzalez",
+      "Aiden Martinez",
+      "Noah Smith",
+      "Mason Brown",
+      "Lucas Hernandez",
+      "Owen Wilson",
+      "Caleb Ramirez",
+      "Nathan Davis",
+      "Ryan Carter"
+    ],
+    "donations": 4500
+  },
+  {
+    "id": 2,
+    "name": "San Francisco Flames",
+    "logo": "Flames.jpeg",
+    "location": "San Francisco, CA",
+    "description": "A team of young athletes from the Bay Area, playing with passion and precision. Help us reach our goals!",
+    "roster": [
+      "Jacob Robinson",
+      "Matthew Evans",
+      "Michael Parker",
+      "Alexander Lee",
+      "Daniel Scott",
+      "James Thompson",
+      "Benjamin Adams",
+      "William Torres",
+      "Joseph Young",
+      "David Hall"
+    ],
+    "donations": 1800
+  },
+  {
+    "id": 3,
+    "name": "Sacramento Stallions",
+    "logo": "Stallions.jpeg",
+    "location": "Sacramento, CA",
+    "description": "A determined basketball squad from Sacramento, known for their hustle and teamwork. Join us on our journey!",
+    "roster": [
+      "Samuel Wright",
+      "Henry Nelson",
+      "Carter Baker",
+      "Julian Morris",
+      "Wyatt Jenkins",
+      "Isaac Reed",
+      "Levi Simmons",
+      "Gabriel Brooks",
+      "Christopher King",
+      "Elijah Moore"
+    ],
+    "donations": 3000
+  }
+]
   
