@@ -14,6 +14,47 @@
         justify-content: center;
         font-size: 25px;
       }
+
+      .basketball-image {
+        width: 500px;
+        display: block; /* Ensures proper alignment */
+        margin: 0 auto; /* Centers the image */
+      }
+
+      .container {
+        display: flex;
+        align-items: flex-start; /* Aligns items at the top */
+        gap: 20px; /* Adds spacing between image and text */
+      }
+
+      .basketball-image {
+        width: 40%; /* Adjust the size of the image */
+        max-width: 300px; /* Ensures the image isn't too large */
+        height: auto; /* Keeps image proportions */
+      }
+
+      .funding-text {
+        flex: 1; /* Allows text section to take remaining space */
+      }
+
+      /* 🔽 Media Query for screens 800px or smaller */
+      @media (max-width: 800px) {
+        .container {
+          flex-direction: column; /* Stack image on top of text */
+          align-items: center; /* Center content */
+          text-align: center; /* Center text */
+        }
+    
+        .basketball-image {
+          width: 80%; /* Make image larger on small screens */
+          max-width: 400px;
+        }
+    
+        .funding-text {
+          text-align: left; /* Aligns text left inside the container */
+          width: 90%; /* Ensures text does not stretch too wide */
+        }
+      }
     </style>
   </head>
   <body>
@@ -78,26 +119,17 @@
     on the lives of these athletes, helping them build confidence, leadership
     skills, and a sense of community.
   </p>
-  <p>
-    Donations to HoopFund provide essential funding for:
-  </p>
   <div class="container">
-    <table>
-      <tr>
-        <td>
-          <img src="images/basketball.jpg" alt="Basketball" width="300" height="300" />
-        </td>
-        <td>
-          <ul>
+    <img src="images/basketball.jpg" class="basketball-image" alt="Basketball"/>
+    <div class="funding-text">
+        <h3>Donations to HoopFund provide essential funding for:</h3>
+        <ul>
             <li><strong>Equipment:</strong> Balls, shoes, uniforms, and protective gear to ensure the players have everything they need to excel.</li>
             <li><strong>Coaching:</strong> Professional coaches and mentorship to help players develop their skills and confidence both on and off the court.</li>
             <li><strong>Tournaments & Leagues:</strong> Opportunities for youth players to compete at local, regional, and national levels, fostering growth and exposure.</li>
             <li><strong>Scholarships:</strong> Financial support for athletes who wish to continue their basketball journey while pursuing higher education.</li>
-          </ul>
-        </td>
-      </tr>
-    </table>
-    
+        </ul>
+    </div>
   </div>
   
   <p>
