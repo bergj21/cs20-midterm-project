@@ -15,7 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <style>
-      .container {
+      .content {
         max-width: 1100px;
         margin: 10px auto;
       }
@@ -24,6 +24,14 @@
         background-color: white;
         border-radius: 8px;
         overflow: hidden;
+      }
+
+      .leaderboard-item-container {
+        background-color: #f0f4f8;
+        width: 700px;
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 8px;
       }
 
       .leaderboard-item-container p {
@@ -40,14 +48,6 @@
         display: none;
         margin-top: 10px;
         border-top: solid 1px var(--gray-color);
-      }
-
-      .leaderboard-item-container {
-        background-color: #f0f4f8;
-        width: 700px;
-        padding: 15px;
-        margin: 10px auto;
-        border-radius: 8px;
       }
 
       .leaderboard-item {
@@ -86,6 +86,56 @@
         font-size: 16px;
         font-weight: bold;
       }
+
+      @media (max-width: 770px) {
+        .leaderboard-item-container {
+          width: 500px;
+        }
+
+        .leaderboard-item img {
+          width: 30px;
+          height: 30px;
+        }
+
+        .rank {
+          font-size: 24px;
+        }
+
+        .team-name {
+          font-size: 20px;
+        }
+
+        .amount {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 585px) {
+        .leaderboard-item-container {
+          width: 300px;
+        }
+
+        .leaderboard-item img {
+          width: 20px;
+          height: 20px;
+        }
+
+        .rank {
+          font-size: 18px;
+        }
+
+        .team-name {
+          font-size: 10px;
+        }
+
+        .amount {
+          font-size: 8px;
+        }
+
+        .leaderboard-dropdown p {
+          font-size: 10px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -108,19 +158,18 @@
     </header>
 
     <script>
-      window.onload = function() {
-        // set up menu toggle for small screens
+      window.onload = function () {
         const menuToggle = document.querySelector('.menu-toggle')
         const menu = document.querySelector('.menu')
 
         menuToggle.addEventListener('click', function () {
           menu.classList.toggle('active')
         })
-    }
+      }
     </script>
 
     <main>
-      <div class="container">
+      <div class="content">
         <h1>Leaderboard</h1>
         <h2 id="league-name"></h2>
         <div id="leaderboard"></div>
@@ -144,44 +193,36 @@
                 let output = ''
                 league.forEach((team, index) => {
                   output += `
-                                        <div class="leaderboard-item-container">
-                                          <div class="leaderboard-item">
-                                            <span class="rank">${
-                                              index + 1
-                                            }</span>
-                                            <div class="team-info">
-                                              <img
-                                                src="images/team-logos/${
-                                                  team.logo
-                                                }"
-                                                alt="Team Logo"
-                                              />
-                                              <span class="team-name">${
-                                                team.name
-                                              }</span>
-                                            </div>
-                                            <span style="margin-right: 20px">Total Fundraised</span>
-                                            <span class="amount">${
-                                              team.donations
-                                            }</span>
-                                            <i
-                                              class="fa-solid fa-angle-up toggle-icon"
-                                              style="margin-left: 30px; cursor: pointer"
-                                            ></i>
-                                          </div>
-                                          <div id="leaderboard-dropdown" class="leaderboard-dropdown">
-                                            <p style="text-align: right; font-weight: 600">${
-                                              team.location
-                                            }</p>
-                                            <p>${team.description}</p>
-                                            <h3>Roster</h3>
-                                            <p>
-                                            ${JSON.stringify(team.roster)
-                                              .replace(/["{}\[\]]/g, '')
-                                              .replace(/,/g, ', ')}
-                                            </p>
-                                          </div>
-                                        </div>`
+                    <div class="leaderboard-item-container">
+                      <div class="leaderboard-item">
+                        <span class="rank">${index + 1}</span>
+                        <div class="team-info">
+                          <img
+                            src="images/team-logos/${team.logo}"
+                            alt="Team Logo"
+                          />
+                          <span class="team-name">${team.name}</span>
+                        </div>
+                        <span class="amount" style="margin-right: 20px">Total Fundraised</span>
+                        <span class="amount">$${team.donations}</span>
+                        <i
+                          class="fa-solid fa-angle-up toggle-icon"
+                          style="margin-left: 30px; cursor: pointer"
+                        ></i>
+                      </div>
+                      <div id="leaderboard-dropdown" class="leaderboard-dropdown">
+                        <p style="text-align: right; font-weight: 600">${
+                          team.location
+                        }</p>
+                        <p>${team.description}</p>
+                        <h3>Roster</h3>
+                        <p>
+                        ${JSON.stringify(team.roster)
+                          .replace(/["{}\[\]]/g, '')
+                          .replace(/,/g, ', ')}
+                        </p>
+                      </div>
+                    </div>`
                 })
                 $('#leaderboard').html(output)
                 $('.toggle-icon').on('click', function () {
