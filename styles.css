@@ -196,6 +196,11 @@ h3 {
     font-size: 30px;
 }
 
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Decrease heading font sizes when the page is too small */
 @media (max-width: 575px) {
     h1 {
