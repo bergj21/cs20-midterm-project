@@ -7,13 +7,12 @@
     <title>Donate</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* General page styling */
       body {
         background-image: url('images/donate-background.jpg');
         background-attachment: scroll;
         background-repeat: no-repeat;
         height: 100vh;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-x: hidden;
       }
 
       .form-content {
@@ -109,6 +108,7 @@
     </footer>
 
     <script>
+      // set up the page
       window.onload = function() {
         // set up menu toggle for small screens
         const menuToggle = document.querySelector('.menu-toggle')
@@ -119,8 +119,10 @@
         })
 
         document.getElementById('donate-form').addEventListener('submit', formSubmitted)
-    }
+      }
 
+      // Form verification. Checks that all required fields are filled and 
+      // any email is valid
       function formSubmitted(event) {
         event.preventDefault() // Prevent form submission
 

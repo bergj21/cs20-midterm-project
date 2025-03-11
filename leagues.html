@@ -19,7 +19,6 @@
       }
 
       /* League Container Styling */
-
       .league-container {
         display: flex;
         flex-wrap: wrap;
@@ -58,7 +57,6 @@
       }
 
       /* Search Container Styling */
-
       .select-btn {
         background-color: var(--orange-color);
         color: white;
@@ -127,6 +125,7 @@
       }
     </style>
     <script>
+      // set up the page
       window.onload = function() {
         // set up menu toggle for small screens
         const menuToggle = document.querySelector('.menu-toggle')
@@ -162,16 +161,16 @@
       <div class="container">
         <h1>Leagues</h1>
         <div id="league-container" class="league-container"></div>
-        <!-- <button class="fundraiser-btn" onclick="location.href='register.html'">
-          <i class="fas fa-handshake"></i> Become a Fundraiser
-        </button> -->
       </div>
     </main>
 
     <script>
+      // Redirects to teams.html page with the selected league's ID.
       function onSelect(id) {
         window.location.href = 'teams.html?league=' + id
       }
+
+      // Fetches league data from a JSON file and generates HTML to display each league's information.
       $(document).ready(function () {
         $.get('data/leagues.json', function (data) {
           leagues = data

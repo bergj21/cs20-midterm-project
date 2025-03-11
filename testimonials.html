@@ -10,8 +10,8 @@
     <style>
       .button-cont {
         display: flex;
-        justify-content: center; /* Places one button on each side */
-        gap: 50px; /* Adds some spacing from the edges */
+        justify-content: center; 
+        gap: 50px; 
       }
   
       /* Button styles */
@@ -42,8 +42,8 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         width: 60%; 
-        max-width: 1200px; /* Optional: Prevent it from getting too wide */
-        margin: auto; /* Centers it on the page */
+        max-width: 1200px; 
+        margin: auto; 
         text-align: left;
       }
 
@@ -51,8 +51,8 @@
         width: 70%;
         max-width: 700px;
         border-radius: 10px;
-        display: block; /* Ensures it takes up space correctly */
-        margin: 0 auto; /* Centers the image */
+        display: block; 
+        margin: 0 auto; 
       }
 
       .team-display h2 {
@@ -155,10 +155,10 @@
       const NUM_TEAMS = 5
 
       let index = 0
+      // Displays the argued team
       function displayTeam(team) {
         // Fade out the current team info
         $('#team-display').fadeOut(700, function () {
-          // Once fade out is complete, update the content
           $('#team-display').html(`
                     <h2>${team.team_name}</h2>
                     <img src="${team.photo}" alt="${team.team_name}">
@@ -173,6 +173,7 @@
         })
       }
 
+      // sets up the page
       $(document).ready(function () {
         $('#previous').click(function () {
           index = index - 1 >= 0 ? index - 1 : NUM_TEAMS - 1
@@ -187,6 +188,7 @@
         displayTeam(teams[index])
       })
 
+      // sets up the page
       window.onload = function() {
         const menuToggle = document.querySelector('.menu-toggle')
         const menu = document.querySelector('.menu')
@@ -206,7 +208,7 @@
     </div>
 
     <div id="team-display" class="team-display">
-      <!-- populated by Javascript code above -->
+      <!-- populated by script above -->
     </div>
 
     <br />

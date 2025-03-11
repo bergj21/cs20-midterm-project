@@ -12,7 +12,7 @@
       }
 
       .form-container {
-        display: none; /* Hidden by default */
+        display: none; 
       }
 
       .form-container.active {
@@ -22,6 +22,7 @@
         margin: 20px 0;
       }
 
+      /* form option buttons */
       .selection-buttons button {
         padding: 15px 25px;
         font-size: 18px;
@@ -33,12 +34,12 @@
       }
 
       .register-team {
-        background-color: #ff6f00;
+        background-color: var(--orange-color);
         color: white;
       }
 
       .register-team:hover {
-        background-color: #d65a00;
+        background-color: var(--dark-orange-color);
       }
 
       .register-league {
@@ -134,6 +135,7 @@
     </main>
 
     <script>
+      // set up the page
       window.onload = function() {
         // set up menu toggle for small screens
         const menuToggle = document.querySelector('.menu-toggle')
@@ -147,6 +149,8 @@
         document.getElementById('register-league-form').addEventListener('submit', leagueFormSubmitted)
       }
 
+      // Form verification for the Register Team form. Checks that all required 
+      // fields are filled and any email is valid
       function teamFormSubmitted(event) {
         event.preventDefault() // Prevent form submission
 
@@ -194,6 +198,8 @@
         }
       }
 
+      // Form verification for the Register League form. Checks that all required 
+      // fields are filled and any email is valid
       function leagueFormSubmitted(event) {
         event.preventDefault() // Prevent form submission
 
@@ -236,6 +242,7 @@
         }
       }
 
+      // Once a form option is chosen, this function displays it
       function showForm(type) {
         // Hide the image
         document.getElementById("team-image").style.display = "none";

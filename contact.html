@@ -36,7 +36,8 @@
       let teamInfo
       let teamYes
       let teamNo
-
+        
+      // set up the page
       window.onload = function() {
         // set up menu toggle for small screens
         const menuToggle = document.querySelector('.menu-toggle')
@@ -57,6 +58,7 @@
           .addEventListener('submit', formSubmitted)
       }
 
+      // toggles the team info part of the form
       function toggleTeamInfo() {
         if (teamYes.checked) {
           teamInfo.style.display = 'block'
@@ -65,6 +67,8 @@
         }
       }
 
+      // Form verification. Checks that all required fields are filled and 
+      // any email is valid
       function formSubmitted(event) {
         event.preventDefault() // Prevent form submission
 

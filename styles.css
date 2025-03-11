@@ -5,6 +5,7 @@
     --gray-color: #222222;
 }
 
+/* General html and body style */
 html, body {
     height: 100%;
     margin: 0;
@@ -12,10 +13,20 @@ html, body {
     flex-direction: column;
 }
 
-main {
-    flex-grow: 1; /* Ensures the main content expands and pushes the footer down */
+body {
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--beige-color);
 }
 
+/* Ensures the main content expands and pushes the footer down */
+main {
+    flex-grow: 1; 
+}
+
+/* Footer style */
 footer {
     display: flex;
     text-align: center;
@@ -27,8 +38,7 @@ footer {
 }
 
 
-/* the header is a flex container with the logo on the left
-   and menu on the right */
+/* Header style */
 header {
     background-color: var(--gray-color); 
     width: 100%;
@@ -42,16 +52,6 @@ header {
     margin: 0;
 }
 
-/* Organizes the flex container body */
-body {
-    padding-top: 80px;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--beige-color);
-}
-
-/* the fixed logo's size and hover effect */
 .logo {
     position: absolute;
     top: 0px;
@@ -66,7 +66,7 @@ body {
     width: 100px;
 }
 
-/* Designs the standard menu, its links, and any hover effects */
+/* Standard menu style */
 .menu {
     list-style: none; 
     margin: 0;
@@ -94,6 +94,7 @@ body {
     color: var(--gray-color); 
 }
 
+/* Style used on any donate button */
 .donate a {
     display: inline-block;
     background-color: var(--orange-color); /* Bright color to stand out */
@@ -161,6 +162,7 @@ body {
     }
 }
 
+/* When the screen is too thin let the dropdown menu cover the entire screen */
 @media (max-width: 750px)
 {
     .menu {
@@ -168,7 +170,6 @@ body {
         background: rgba(34, 34, 34, 0.9); 
     }
 }
-
 
 /* headings text standards */
 h1, h2, h3, h4 {
@@ -219,14 +220,12 @@ img {
     font-family: Arial, sans-serif; /* Make placeholder text consistent */
 }
 
-/* Main Content Area */
 .form-content {
     display: flex;
     justify-content: center;
     padding: 0 20px;
 }
 
-/* Contact Form Container */
 .form-container {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
@@ -286,7 +285,7 @@ img {
     display: flex;
     gap: 15px;
     margin-bottom: 20px;
-    align-items: center; /* Ensure text is aligned with buttons */
+    align-items: center; 
 }
 
 .radio-group label,
@@ -299,5 +298,5 @@ img {
 
 .radio-group input,
 .checkbox-group input {
-    margin: 0; /* Ensures proper alignment */
+    margin: 0; 
 }
