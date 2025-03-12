@@ -283,9 +283,17 @@ img {
 .radio-group,
 .checkbox-group {
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    align-items: center; 
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px; 
+}
+
+/* Adjust spacing for mobile */
+@media (max-width: 600px) {
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 5px; 
+    }
 }
 
 .radio-group label,
