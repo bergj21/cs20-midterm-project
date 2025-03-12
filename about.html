@@ -8,14 +8,33 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       body {
-        background: url('images/basketball-court.jpg') no-repeat center
-          center/cover;
+        background: url('images/courter.jpg') no-repeat center center/cover;
+        color: white;
+      }
+      body, main {
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Ensures the card stays centered */
+        flex-direction: column;
+        padding-top: 80px; 
       }
 
       .about-container {
         width: 80%;
+        margin-top: 20px; 
         max-width: 1200px;
         margin: 70px auto;
+        
         text-align: center;
         background: rgba(0, 0, 0, 0.8);
         padding: 30px;
@@ -34,23 +53,24 @@
         font-size: 20px;
         font-style: italic;
         margin-bottom: 30px;
-        color: #ffcc00;
+        color: var(--orange-color);
       }
 
       .team-members {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        color: white;
       }
 
       .member {
-        background: rgba(255, 165, 0, 0.8);
+        background: rgba(245, 240, 225, 0.75);
         padding: 15px;
         margin: 10px;
         border-radius: 8px;
         width: 220px;
         color: black;
-        box-shadow: 0 0 10px rgba(255, 165, 0, 0.7);
+        box-shadow: 0 0 10px var(--orange-color);
       }
     </style>
   </head>
@@ -75,28 +95,28 @@
     </header>
 
     <main>
-    <div class="about-container">
-      <h1>About Us</h1>
-      <p class="mission">
-        Empowering young athletes through community-driven fundraising.
-      </p>
-      <p>
-        Our Youth Basketball Fundraiser was founded to support young athletes in
-        achieving their dreams. We aim to provide financial assistance,
-        equipment, and opportunities for underprivileged players so they can
-        focus on developing their skills and passion for the game.
-      </p>
-      <p>
-        This initiative is a league-wide effort, bringing together coaches,
-        parents, and community leaders to ensure that every young player has the
-        resources they need. Donations help fund tournament fees, new uniforms,
-        training programs, and scholarship opportunities for players who may not
-        have the financial means to participate in competitive basketball.
-      </p>
+        <div class="about-container">
+        <h1>About Us</h1>
+        <p class="mission">
+            Empowering young athletes through community-driven fundraising.
+        </p>
+        <p>
+            HoopFund was founded to support young athletes achieve their dreams. 
+            We aim to provide financial assistance, equipment, and opportunities 
+            for underprivileged players so they can focus on developing their 
+            skills and passion for the game.
+        </p>
+        <p>
+            This initiative is a league-wide effort, bringing together coaches,
+            parents, and community leaders to ensure that every young player has the
+            resources they need. Donations help fund tournament fees, new uniforms,
+            training programs, and scholarship opportunities for players who may not
+            have the financial means to participate in competitive basketball.
+        </p>
 
-      <h4>Meet Our Team</h4>
-      <div class="team-members" id="team-container"></div>
-    </div>
+        <h4>Meet Our Team</h4>
+        <div class="team-members" id="team-container"></div>
+        </div>
 
     </main>
 
@@ -107,27 +127,28 @@
     <script>
       const teamMembers = [
         {
-          name: 'Sarah Thompson',
+          name: 'Alex Shriver',
           role: 'Fundraising Director',
           experience: '10 years',
         },
         {
-          name: 'James Lee',
+          name: 'Jack Berg',
           role: 'Community Coordinator',
           experience: '8 years',
         },
         {
-          name: 'Emma Johnson',
+          name: 'Dhanvi Shivadevuni',
           role: 'Event Organizer',
           experience: '7 years',
         },
         {
-          name: 'David Carter',
+          name: 'Scott Wu',
           role: 'Sponsorship Manager',
           experience: '6 years',
         },
       ]
 
+      // set the page up
       window.onload = function() {
         // set up menu toggle for small screens
         const menuToggle = document.querySelector('.menu-toggle')
